@@ -60,7 +60,7 @@ const FounderStory = () => {
                 "Every blank canvas tells a story waiting to be discovered. Our job is to help you tell yours."
               </blockquote>
               <cite className="block mt-3 text-sm text-muted-foreground">
-                - Satya Prakash Subudhi (Papu), Founder
+                - Satya Prakash Subudhi, Founder
               </cite>
             </div>
           </div>
