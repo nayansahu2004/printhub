@@ -8,7 +8,7 @@ import path from "path";
 export default defineConfig({
   // Build options
   build: {
-    outDir: "build",            // keep build output folder - ensure Vercel uses "build" (or change to "dist")
+    outDir: "dist",            // keep build output folder - ensure Vercel uses "build" (or change to "dist")
     sourcemap: true,            // optional - helpful for debugging production builds
     chunkSizeWarningLimit: 2000,
   },
