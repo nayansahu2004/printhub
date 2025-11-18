@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #FEFEFE; /* white */
+    --color-foreground: #2C3E50; /* slate-800 */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-input: #F8F9FA; /* gray-50 */
+    --color-ring: #2D5A87; /* blue-800 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #2C3E50; /* slate-800 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #2C3E50; /* slate-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F8F9FA; /* gray-50 */
+    --color-muted-foreground: #6C757D; /* gray-500 */
+    
+    /* Brand Primary Colors */
+    --color-primary: #2D5A87; /* blue-800 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Brand Secondary Colors */
+    --color-secondary: #F4A261; /* orange-300 */
+    --color-secondary-foreground: #2C3E50; /* slate-800 */
+    
+    /* Action Colors */
+    --color-destructive: #E74C3C; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #E76F51; /* orange-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Status Colors */
+    --color-success: #27AE60; /* green-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #F39C12; /* yellow-500 */
+    --color-warning-foreground: #2C3E50; /* slate-800 */
+    
+    --color-error: #E74C3C; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Brand Conversion Colors */
+    --color-whatsapp: #25D366; /* whatsapp-green */
+    --color-whatsapp-foreground: #FFFFFF; /* white */
+    
+    /* Surface Colors */
+    --color-surface: #F8F9FA; /* gray-50 */
+    --color-surface-foreground: #2C3E50; /* slate-800 */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #2C3E50; /* slate-800 */
+    --color-text-secondary: #6C757D; /* gray-500 */
+    
+    /* Canvas Colors */
+    --color-canvas: #FAFAFA; /* gray-25 */
+    --color-canvas-foreground: #2C3E50; /* slate-800 */
+    
+    /* Trust Builder */
+    --color-trust: #6C757D; /* gray-500 */
+    --color-trust-foreground: #FFFFFF; /* white */
+    
+    /* Brand Energy */
+    --color-brand-energy: #FF6B35; /* orange-500 */
+    --color-brand-energy-foreground: #FFFFFF; /* white */
+    
+    /* Professional Trust */
+    --color-professional: #2E86AB; /* blue-600 */
+    --color-professional-foreground: #FFFFFF; /* white */
+    
+    /* CTA Action */
+    --color-cta: #FF8C42; /* orange-400 */
+    --color-cta-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+  
+  .font-headline {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .font-cta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-brand {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  /* Brand Shadows */
+  .shadow-brand {
+    box-shadow: 0 4px 6px -1px rgba(255, 107, 53, 0.15), 0 2px 4px -1px rgba(255, 107, 53, 0.06);
+  }
+  
+  .shadow-brand-lg {
+    box-shadow: 0 10px 15px -3px rgba(255, 107, 53, 0.15), 0 4px 6px -2px rgba(255, 107, 53, 0.05);
+  }
+  
+  .shadow-neutral {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-neutral-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Brand Animations */
+  .animate-brand {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-brand-fast {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animate-brand-slow {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* WhatsApp Pulse Animation */
+  .whatsapp-pulse {
+    animation: whatsapp-pulse 2s infinite;
+  }
+  
+  @keyframes whatsapp-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+  
+  /* Logo Morphing Animation */
+  .logo-morph {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: logo-morph 2s ease-in-out forwards;
+  }
+  
+  @keyframes logo-morph {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Color Splash Hover Effect */
+  .color-splash {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .color-splash::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--color-brand-energy) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+  
+  .color-splash:hover::before {
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Canvas Texture Background */
+  .canvas-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  /* Fabric Texture Background */
+  .fabric-texture {
+    background-image: 
+      linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.02) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.02) 75%);
+    background-size: 4px 4px;
+    background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+  }
+}
+
+@layer utilities {
+  /* Brand Spacing System */
+  .space-brand-xs { @apply space-y-2; }
+  .space-brand-sm { @apply space-y-3; }
+  .space-brand-md { @apply space-y-4; }
+  .space-brand-lg { @apply space-y-6; }
+  .space-brand-xl { @apply space-y-8; }
+  .space-brand-2xl { @apply space-y-12; }
+  .space-brand-3xl { @apply space-y-16; }
+  
+  /* Brand Grid System */
+  .grid-brand { @apply grid gap-4 md:gap-6 lg:gap-8; }
+  .grid-brand-tight { @apply grid gap-2 md:gap-3 lg:gap-4; }
+  .grid-brand-loose { @apply grid gap-6 md:gap-8 lg:gap-12; }
+  
+  /* Brand Typography Utilities */
+  .text-brand-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-brand font-bold leading-tight;
+  }
+  
+  .text-brand-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-headline font-semibold;
+  }
+  
+  .text-brand-subtitle {
+    @apply text-lg md:text-xl font-headline font-medium;
+  }
+  
+  .text-brand-body {
+    @apply text-base font-body leading-relaxed;
+  }
+  
+  .text-brand-caption {
+    @apply text-sm font-body text-muted-foreground;
+  }
+  
+  /* Brand Button Utilities */
+.btn-brand-primary  {
+    @apply bg-brand-energy text-brand-energy-foreground font-cta px-6 py-3 rounded-lg shadow-brand hover:shadow-brand-lg animate-brand;
+  }
+.btn-brand-secondary  {
+    @apply bg-professional text-professional-foreground font-cta px-6 py-3 rounded-lg shadow-neutral hover:shadow-neutral-lg animate-brand;
+  }
+.btn-whatsapp  {
+    @apply bg-whatsapp text-whatsapp-foreground font-cta px-6 py-3 rounded-lg shadow-neutral hover:shadow-neutral-lg animate-brand whatsapp-pulse;
+  }
+  
+  /* Brand Card Utilities */
+  .card-brand {
+    @apply bg-card border border-border rounded-lg p-6 shadow-neutral hover:shadow-neutral-lg animate-brand;
+  }
+  
+  .card-brand-elevated {
+    @apply bg-card border border-border rounded-lg p-6 shadow-brand hover:shadow-brand-lg animate-brand;
+  }
+  
+  /* Responsive Container */
+  .container-brand {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Brand Gradients */
+  .gradient-brand {
+    background: linear-gradient(135deg, var(--color-brand-energy) 0%, var(--color-professional) 100%);
+  }
+  
+  .gradient-canvas {
+    background: linear-gradient(135deg, var(--color-canvas) 0%, var(--color-background) 100%);
+  }
+}
