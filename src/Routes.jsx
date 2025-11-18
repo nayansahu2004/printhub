@@ -3,11 +3,11 @@ import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import NotFound from "pages/NotFound";
-import CustomOrderPage from './pages/custom-order';
-import Services from './pages/services';
-import ContactPage from './pages/contact';
+import CustomOrderPage from './Pages/custom-order';
+import Services from './Pages/services';
+import ContactPage from './Pages/contact';
 import Gallery from './Pages/gallery';
-import About from './pages/about';
+import About from './Pages/about';
 import Homepage from './Pages/homepage';
 
 const Routes = () => {
