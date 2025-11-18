@@ -20,7 +20,7 @@ const HeroSection = () => {
     id: 2,
     image: "https://images.unsplash.com/photo-1591617702136-6cd45bbd51ac",
     alt: "Collection of custom printed mugs with various colorful designs and logos arranged on wooden table",
-    title: "Personalization Perfected",
+    title: "Perfect For You",
     subtitle: "Expert printing and sublimation services for gifts, events, and self-expression",
     cta: "Explore Services"
   },
@@ -76,7 +76,7 @@ const HeroSection = () => {
               alt={slide?.alt}
               className="w-full h-full object-cover" />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40 "></div>
             </div>
           </div>
         )}
@@ -92,7 +92,7 @@ const HeroSection = () => {
                 <span>Since September 2024</span>
               </div>
               
-              <h1 className="text-brand-hero text-foreground leading-tight">
+              <h1 className="text-brand-hero text-background leading-tight">
                 {heroSlides?.[currentSlide]?.title}
               </h1>
               
@@ -120,7 +120,7 @@ const HeroSection = () => {
                   size="lg"
                   iconName="ArrowRight"
                   iconPosition="right"
-                  className="w-full sm:w-auto text-lg px-8 py-4">
+                  className="bg-white w-full sm:w-auto text-lg px-8 py-4">
 
                   {heroSlides?.[currentSlide]?.cta}
                 </Button>
@@ -129,7 +129,7 @@ const HeroSection = () => {
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-2 text-sm text-background">
                 <Icon name="Shield" size={16} className="text-success" />
                 <span>Quality Guaranteed</span>
               </div>

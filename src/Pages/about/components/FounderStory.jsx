@@ -7,7 +7,7 @@ const FounderStory = () => {
   {
     date: "September 2024",
     title: "PrintHub Pro Founded",
-    description: "Satya Prakash Subudhi (Papu) established PrintHub Pro with a vision to transform everyday items into meaningful, personalized treasures.",
+    description: "Satya Prakash Subudhi established PrintHub Pro with a vision to transform everyday items into meaningful, personalized treasures.",
     icon: "Rocket"
   },
   {
@@ -41,7 +41,7 @@ const FounderStory = () => {
                 From Vision to Reality
               </h2>
               <p className="text-brand-body text-muted-foreground">
-                The story of PrintHub Pro began with a simple observation: in a world of mass production, people crave something uniquely theirs. Satya Prakash Subudhi, fondly known as Papu, recognized this need and decided to bridge the gap between imagination and reality.
+                The story of The PrintHub began with a simple observation: in a world of mass production, people crave something uniquely theirs. Satya Prakash Subudhi, fondly known as Papu, recognized this need and decided to bridge the gap between imagination and reality.
               </p>
             </div>
 

@@ -30,12 +30,12 @@ const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Papu, I'm interested in custom printing services. Can you help me get started?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya, I'm interested in custom printing services. Can you help me get started?");
+    window.open(`https://wa.me/919937643338?text=${message}`, '_blank');
   };
 
   const isActivePath = (path) => {
-    return location?.pathname === path;
+    return location?.pathname === path; 
   };
 
   const toggleMenu = () => {
@@ -81,7 +81,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-brand font-bold text-brand-energy">
-                PrintHub Pro
+                The PrintHub 
               </h1>
               <p className="text-xs text-muted-foreground font-body">
                 Your Vision, Our Craft
