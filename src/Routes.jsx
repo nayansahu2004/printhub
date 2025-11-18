@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
-import NotFound from "pages/NotFound";
+import NotFound from "Pages/NotFound";
 import CustomOrderPage from './Pages/custom-order';
 import Services from './Pages/services';
 import ContactPage from './Pages/contact';
