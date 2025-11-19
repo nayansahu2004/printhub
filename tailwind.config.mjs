@@ -6,8 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        // Core System Colors
+
+      backgroundImage: {
+        'print-gradient': 'linear-gradient(135deg, #082540 0%, #000000 100%)'
+      },
+      colors: {        // Core System Colors
         background: 'var(--color-background)', // white
         foreground: 'var(--color-foreground)', // slate-800
         border: 'var(--color-border)', // gray-200
@@ -98,7 +101,7 @@ export default {
         
         // Brand Energy
         'brand-energy': {
-          DEFAULT: 'var(--color-brand-energy)', // orange-500
+          DEFAULT: '#0A1A2F', // orange-500
           foreground: 'var(--color-brand-energy-foreground)' // white
         },
         

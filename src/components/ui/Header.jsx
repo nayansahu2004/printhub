@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Icon from '../AppIcon';
-import Button from './Button';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Icon from "../AppIcon";
+import Button from "./Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,193 +9,181 @@ const Header = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { name: 'Home', path: '/homepage', icon: 'Home' },
-    { name: 'Services', path: '/services', icon: 'Package' },
-    { name: 'Gallery', path: '/gallery', icon: 'Image' },
-    { name: 'About', path: '/about', icon: 'Info' },
-    { name: 'Contact', path: '/contact', icon: 'Phone' }
+    { name: "Home", path: "/homepage", icon: "Home" },
+    { name: "Services", path: "/services", icon: "Package" },
+    { name: "Gallery", path: "/gallery", icon: "Image" },
+    { name: "About", path: "/about", icon: "Info" },
+    { name: "Contact", path: "/contact", icon: "Phone" },
   ];
 
-  const secondaryItems = [
-    { name: 'Custom Order', path: '/custom-order', icon: 'ShoppingCart' }
-  ];
+  const secondaryItems = [{ name: "Custom Order", path: "/custom-order", icon: "ShoppingCart" }];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Satya, I'm interested in custom printing services. Can you help me get started?");
-    window.open(`https://wa.me/919937643338?text=${message}`, '_blank');
+    const msg = encodeURIComponent("Hi Satya, I'm interested in custom printing services. Can you help me get started?");
+    window.open(`https://wa.me/919937643338?text=${msg}`, "_blank");
   };
 
-  const isActivePath = (path) => {
-    return location?.pathname === path; 
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const isActivePath = (p) => location.pathname === p;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-neutral' : 'bg-background'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-neutral" : "bg-transparent"
+      }`}
+    >
       <div className="container-brand">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link 
-            to="/homepage" 
-            className="flex items-center space-x-3 group"
-          >
-            <div className="relative">
-              <svg 
-                width="40" 
-                height="40" 
-                viewBox="0 0 40 40" 
-                className="text-brand-energy group-hover:scale-105 transition-transform duration-300"
-              >
-                <circle 
-                  cx="20" 
-                  cy="20" 
-                  r="18" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2"
-                  className="logo-morph"
-                />
-                <path 
-                  d="M12 20h16M20 12v16" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round"
-                  className="logo-morph"
-                  style={{ animationDelay: '0.5s' }}
-                />
-              </svg>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-brand font-bold text-brand-energy">
-                The PrintHub 
-              </h1>
-              <p className="text-xs text-muted-foreground font-body">
-                Your Vision, Our Craft
-              </p>
-            </div>
+          {/* LOGO */}
+          <Link to="/homepage" className="flex items-center gap-3 group">
+            <img
+              src="/Logo.svg"
+              alt="PrintHub Logo"
+              className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems?.map((item) => (
-              <Link
-                key={item?.path}
-                to={item?.path}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                  isActivePath(item?.path)
-                    ? 'bg-brand-energy text-brand-energy-foreground shadow-brand'
-                    : 'text-foreground hover:bg-muted hover:text-brand-energy'
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center gap-2">
+            {navigationItems.map((item) => {
+              const active = isActivePath(item.path);
+              // shared classes so icon + text always match
+              const linkBase =
+                "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-300 ease-in-out transform hover:-translate-y-[0.5px]";
+              const activeClass = "bg-brand-energy text-white shadow-brand";
+              const inactiveClass = isScrolled ? "text-white hover:text-brand-energy" : "text-foreground hover:text-brand-energy";
+
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`${linkBase} ${active ? activeClass : inactiveClass}`}
+                >
+                  <Icon name={item.icon} size={18} className={active ? "text-white" : isScrolled ? "text-white" : "text-foreground"} />
+                  <span className={`${active ? "text-white" : isScrolled ? "text-white" : "text-foreground"}`}>{item.name}</span>
+                </Link>
+              );
+            })}
+
+            {/* MORE MENU */}
+            <div className="relative group">
+              <button
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-300 ease-in-out ${
+                  isScrolled ? "text-white hover:text-brand-energy" : "text-foreground hover:text-brand-energy"
                 }`}
               >
-                <Icon name={item?.icon} size={18} />
-                <span className="font-headline">{item?.name}</span>
-              </Link>
-            ))}
-            
-            {/* More Menu */}
-            <div className="relative group">
-              <button className="flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-foreground hover:bg-muted hover:text-brand-energy transition-all duration-200">
-                <Icon name="MoreHorizontal" size={18} />
-                <span className="font-headline">More</span>
+                <Icon name="MoreHorizontal" size={18} className={isScrolled ? "text-white" : "text-foreground"} />
+                <span>More</span>
               </button>
-              
-              <div className="absolute top-full right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-neutral-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-                {secondaryItems?.map((item) => (
-                  <Link
-                    key={item?.path}
-                    to={item?.path}
-                    className={`flex items-center space-x-3 px-4 py-3 text-sm font-medium transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${
-                      isActivePath(item?.path)
-                        ? 'bg-brand-energy text-brand-energy-foreground'
-                        : 'text-foreground hover:bg-muted hover:text-brand-energy'
-                    }`}
-                  >
-                    <Icon name={item?.icon} size={16} />
-                    <span className="font-headline">{item?.name}</span>
-                  </Link>
-                ))}
+
+              <div className="absolute top-full right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                {secondaryItems.map((item) => {
+                  const active = isActivePath(item.path);
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors duration-200 ${
+                        active ? "bg-brand-energy text-white" : "text-foreground hover:bg-muted hover:text-brand-energy"
+                      }`}
+                    >
+                      <Icon name={item.icon} size={16} className={active ? "text-white" : "text-foreground"} />
+                      <span>{item.name}</span>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </nav>
 
-          {/* WhatsApp CTA & Mobile Menu */}
-          <div className="flex items-center space-x-3">
-            {/* WhatsApp Button */}
-            <Button
-              variant="success"
-              size="sm"
-              iconName="MessageCircle"
-              iconPosition="left"
-              onClick={handleWhatsAppClick}
-              className="hidden sm:flex whatsapp-pulse"
-            >
-              Chat Now
-            </Button>
+          {/* WHATSAPP + MOBILE ICONS */}
+          <div className="flex items-center gap-3">
+            {/* DESKTOP WHATSAPP */}
+            <div className="hidden sm:inline-flex">
+              <Button
+                size="sm"
+                onClick={handleWhatsAppClick}
+                className="px-4 py-2 bg-green-600 text-white hover:bg-white hover:text-green-600 border-transparent transition-colors duration-200"
+              >
+                <Icon name="MessageCircle" size={18} />
+                <span>Chat Now</span>
+              </Button>
+            </div>
 
-            {/* Mobile WhatsApp Icon */}
-            <Button
-              variant="success"
-              size="icon"
-              iconName="MessageCircle"
-              onClick={handleWhatsAppClick}
-              className="sm:hidden whatsapp-pulse"
-            />
+            {/* MOBILE WHATSAPP */}
+            <div className="sm:hidden">
+              <Button
+                size="icon"
+                onClick={handleWhatsAppClick}
+                className="bg-green-600 text-white hover:bg-white hover:text-green-600 transition-colors duration-200"
+                iconName="MessageCircle"
+              />
+            </div>
 
-            {/* Mobile Menu Toggle */}
-            <Button
-              variant="ghost"
-              size="icon"
-              iconName={isMenuOpen ? "X" : "Menu"}
-              onClick={toggleMenu}
-              className="lg:hidden"
-            />
+            {/* MOBILE MENU TOGGLE - ensure hidden on desktop */}
+            <div className="lg:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                iconName={isMenuOpen ? "X" : "Menu"}
+                onClick={() => setIsMenuOpen((v) => !v)}
+                className={`${isScrolled ? "text-white" : "text-foreground"}`}
+                aria-expanded={isMenuOpen}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              />
+            </div>
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <nav className="py-4 space-y-2 border-t border-border">
-            {[...navigationItems, ...secondaryItems]?.map((item) => (
-              <Link
-                key={item?.path}
-                to={item?.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                  isActivePath(item?.path)
-                    ? 'bg-brand-energy text-brand-energy-foreground shadow-brand'
-                    : 'text-foreground hover:bg-muted hover:text-brand-energy'
-                }`}
-              >
-                <Icon name={item?.icon} size={20} />
-                <span className="font-headline">{item?.name}</span>
-              </Link>
-            ))}
-            
-            {/* Mobile WhatsApp CTA */}
-            <div className="pt-4 border-t border-border">
+        {/* MOBILE NAV (white panel with dividers) */}
+        <div
+          className={`lg:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          {/* top dividing line that appears when menu opens */}
+          <div className={`h-[1px] transition-colors duration-300 ${isMenuOpen ? "bg-border" : "bg-transparent"}`} />
+
+          {/* white panel */}
+          <nav
+            className={`py-2 ${isMenuOpen ? "bg-white shadow-lg rounded-b-lg mt-2" : "bg-white/0"} transition-all duration-300`}
+            role="menu"
+            aria-hidden={!isMenuOpen}
+          >
+            {[...navigationItems, ...secondaryItems].map((item, idx) => {
+              const active = isActivePath(item.path);
+              // item classes: dark text, full width, divider below
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`flex items-center gap-3 px-4 py-4 text-sm font-medium transition-colors duration-200 ${
+                    active ? "bg-brand-energy text-white" : "text-foreground hover:text-brand-energy"
+                  } ${idx !== navigationItems.length + secondaryItems.length - 1 ? "border-b border-border" : ""}`}
+                  role="menuitem"
+                >
+                  <Icon name={item.icon} size={20} className={active ? "text-white" : "text-foreground"} />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
+
+            <div className="pt-3 px-4 border-t border-border">
               <Button
-                variant="success"
                 fullWidth
+                onClick={() => {
+                  handleWhatsAppClick();
+                  setIsMenuOpen(false);
+                }}
+                className="bg-green-600 text-white hover:bg-white hover:text-green-600 transition-colors duration-200"
                 iconName="MessageCircle"
                 iconPosition="left"
-                onClick={handleWhatsAppClick}
-                className="whatsapp-pulse"
               >
                 Start Your Custom Design
               </Button>
