@@ -16,7 +16,7 @@ const CTASection = () => {
       description: "Get instant pricing for your project",
       icon: "Calculator",
       action: "whatsapp",
-      color: "bg-success/10 text-success"
+      color: "bg-yellow-300/20 text-yellow-300"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const CTASection = () => {
       description: "Free design advice and suggestions",
       icon: "Palette",
       action: "whatsapp",
-      color: "bg-brand-energy/10 text-brand-energy"
+      color: "bg-yellow-300/20 text-yellow-300"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const CTASection = () => {
       description: "Start your personalized project",
       icon: "ShoppingCart",
       action: "custom-order",
-      color: "bg-professional/10 text-professional"
+      color: "bg-white/5 text-white"
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const CTASection = () => {
       description: "Browse our latest work",
       icon: "Image",
       action: "gallery",
-      color: "bg-warning/10 text-warning"
+      color: "bg-white/5 text-white"
     }
   ];
 
@@ -52,16 +52,22 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-brand relative overflow-hidden">
+    <section
+      className="py-16 lg:py-24 relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(120deg, rgba(8,37,64,1) 0%, rgba(4,12,20,1) 60%, rgba(0,0,0,1) 100%)'
+      }}
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="canvas-texture w-full h-full"></div>
+      <div className="absolute inset-0 opacity-8 -z-10">
+        <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
       </div>
+
       <div className="container-brand relative z-10">
         {/* Main CTA */}
         <div className="text-center space-y-8 mb-16">
           <div className="space-y-4">
-            <div className="inline-flex items-center space-x-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center space-x-2 bg-white/10 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium">
               <Icon name="Sparkles" size={16} />
               <span>Ready to Get Started?</span>
             </div>
@@ -81,12 +87,12 @@ const CTASection = () => {
           {/* Primary CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              variant="secondary"
+              variant="default"
               size="xl"
               iconName="MessageCircle"
               iconPosition="left"
               onClick={handleWhatsAppClick}
-              className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground border-0 text-lg px-8 py-4 whatsapp-pulse"
+              className="bg-yellow-300 text-black border-0 text-lg px-8 py-4 font-semibold"
             >
               Chat with Satya Now
             </Button>
@@ -97,7 +103,7 @@ const CTASection = () => {
                 size="xl"
                 iconName="Palette"
                 iconPosition="left"
-                className="border-white text-white hover:bg-white hover:text-brand-energy text-lg px-8 py-4"
+                className="border-white text-white hover:bg-white/10 hover:text-black text-lg px-8 py-4"
               >
                 Start Custom Order
               </Button>
@@ -126,13 +132,13 @@ const CTASection = () => {
         </div>
 
         {/* Quick Actions Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {quickActions?.map((action) => (
             <div key={action?.id} className="group">
               {action?.action === 'whatsapp' ? (
                 <button
                   onClick={() => handleActionClick(action?.action)}
-                  className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-left hover:bg-white/20 transition-all duration-300 group-hover:scale-105"
+                  className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-left hover:bg-white/10 transition-all duration-300 group-hover:scale-105"
                 >
                   <div className="space-y-4">
                     <div className={`w-12 h-12 rounded-lg ${action?.color} flex items-center justify-center`}>
@@ -155,7 +161,7 @@ const CTASection = () => {
               ) : (
                 <Link
                   to={action?.action === 'custom-order' ? '/custom-order' : '/gallery'}
-                  className="block w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-left hover:bg-white/20 transition-all duration-300 group-hover:scale-105"
+                  className="block w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-left hover:bg-white/10 transition-all duration-300 group-hover:scale-105"
                 >
                   <div className="space-y-4">
                     <div className={`w-12 h-12 rounded-lg ${action?.color} flex items-center justify-center`}>
@@ -181,7 +187,7 @@ const CTASection = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="text-center pt-16 border-t border-white/20 mt-16">
+        <div className="text-center pt-16 border-t border-white/10 mt-16">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-white">
               Prefer to Call or Email?

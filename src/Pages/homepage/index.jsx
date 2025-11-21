@@ -66,9 +66,10 @@ const Homepage = () => {
         <FloatingWhatsApp />
 
         {/* Footer */}
-        <footer className="bg-foreground text-background py-12">
+        <footer className="bg-black text-white py-12 border-t border-white/10">
           <div className="container-brand">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              
               {/* Company Info */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -76,7 +77,7 @@ const Homepage = () => {
                     width="32" 
                     height="32" 
                     viewBox="0 0 40 40" 
-                    className="text-brand-energy"
+                    className="text-yellow-300"
                   >
                     <circle 
                       cx="20" 
@@ -94,65 +95,67 @@ const Homepage = () => {
                     />
                   </svg>
                   <div>
-                    <h3 className="text-lg font-brand font-bold text-brand-energy">PrintHub Pro</h3>
-                    <p className="text-xs text-background/70">Your Vision, Our Craft</p>
+                    <h3 className="text-lg font-brand font-bold text-white">PrintHub Pro</h3>
+                    <p className="text-xs text-white/70">Your Vision, Our Craft</p>
                   </div>
                 </div>
-                <p className="text-sm text-background/80 leading-relaxed">
+
+                <p className="text-sm text-white/80 leading-relaxed">
                   Transforming ideas into beautiful reality through expert custom printing and sublimation services since September 2024.
                 </p>
               </div>
 
               {/* Quick Links */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-background">Quick Links</h4>
+                <h4 className="font-semibold text-white">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="/services" className="text-background/80 hover:text-brand-energy transition-colors">Services</a></li>
-                  <li><a href="/gallery" className="text-background/80 hover:text-brand-energy transition-colors">Gallery</a></li>
-                  <li><a href="/about" className="text-background/80 hover:text-brand-energy transition-colors">About Us</a></li>
-                  <li><a href="/contact" className="text-background/80 hover:text-brand-energy transition-colors">Contact</a></li>
-                  <li><a href="/custom-order" className="text-background/80 hover:text-brand-energy transition-colors">Custom Order</a></li>
+                  <li><a href="/services" className="text-white/80 hover:text-yellow-300 transition-colors">Services</a></li>
+                  <li><a href="/gallery" className="text-white/80 hover:text-yellow-300 transition-colors">Gallery</a></li>
+                  <li><a href="/about" className="text-white/80 hover:text-yellow-300 transition-colors">About Us</a></li>
+                  <li><a href="/contact" className="text-white/80 hover:text-yellow-300 transition-colors">Contact</a></li>
+                  <li><a href="/custom-order" className="text-white/80 hover:text-yellow-300 transition-colors">Custom Order</a></li>
                 </ul>
               </div>
 
               {/* Services */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-background">Our Services</h4>
+                <h4 className="font-semibold text-white">Our Services</h4>
                 <ul className="space-y-2 text-sm">
-                  <li className="text-background/80">Custom T-Shirts</li>
-                  <li className="text-background/80">Personalized Mugs</li>
-                  <li className="text-background/80">Phone Cases</li>
-                  <li className="text-background/80">Business Cards</li>
-                  <li className="text-background/80">Banners & Signage</li>
+                  <li className="text-white/80">Custom T-Shirts</li>
+                  <li className="text-white/80">Personalized Mugs</li>
+                  <li className="text-white/80">Phone Cases</li>
+                  <li className="text-white/80">Business Cards</li>
+                  <li className="text-white/80">Banners & Signage</li>
                 </ul>
               </div>
 
               {/* Contact Info */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-background">Get in Touch</h4>
+                <h4 className="font-semibold text-white">Get in Touch</h4>
                 <div className="space-y-3 text-sm">
-                  <a href="tel:+919876543210" className="flex items-center space-x-2 text-background/80 hover:text-brand-energy transition-colors">
+                  <a href="tel:+919876543210" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
                     <span>📞</span>
                     <span>+91 98765 43210</span>
                   </a>
-                  <a href="mailto:hello@printhubpro.com" className="flex items-center space-x-2 text-background/80 hover:text-brand-energy transition-colors">
+                  <a href="mailto:hello@printhubpro.com" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
                     <span>✉️</span>
                     <span>hello@printhubpro.com</span>
                   </a>
-                  <div className="flex items-center space-x-2 text-background/80">
+                  <div className="flex items-center space-x-2 text-white/80">
                     <span>🕒</span>
                     <span>Mon-Sat: 9 AM - 8 PM</span>
                   </div>
                 </div>
               </div>
+
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-background/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-sm text-background/60">
+            <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-white/60">
                 © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. Founded by Satya Prakash Subudhi (Papu).
               </p>
-              <div className="flex items-center space-x-4 text-sm text-background/60">
+              <div className="flex items-center space-x-4 text-sm text-white/60">
                 <span>Made with ❤️ for custom printing</span>
               </div>
             </div>

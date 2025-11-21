@@ -134,9 +134,9 @@ const ServicesPreview = () => {
 
                     <p className="text-sm text-slate-700 leading-relaxed">
                       {service.description}
-                    </p>
+                    </p> 
 
-                    {/* Features */}
+                    {/* Features */}  
                     <div className="flex flex-wrap gap-2">
                       {service.features.map((feature, idx) => (
                         <span
@@ -157,7 +157,7 @@ const ServicesPreview = () => {
                         iconName="MessageCircle"
                         iconPosition="left"
                         onClick={() => handleWhatsAppInquiry(service.name)}
-                        className="flex-1 text-xs bg-transparent border border-slate-200 text-slate-900 hover:bg-slate-50"
+                        className="flex-1 text-xs bg-transparent border hover:bg-primary border-slate-900 text-slate-900 "
                       >
                         Get Quote
                       </Button>
@@ -168,7 +168,7 @@ const ServicesPreview = () => {
                           size="sm"
                           iconName="ArrowRight"
                           iconPosition="right"
-                          className="w-full text-xs text-slate-900 hover:bg-slate-50"
+                          className="bg-primary w-full text-xs text-white hover:bg-slate-50 hover:text-black "
                         >
                           Learn More
                         </Button>
@@ -199,8 +199,8 @@ const ServicesPreview = () => {
                     variant="solid"
                     size="lg"
                     iconName="Palette"
-                    iconPosition="left"
-                    className="bg-white text-brand-energy hover:bg-white/95"
+                    iconPosition="  left"
+                    className="bg-yellow-300 text-black font-bold hover:bg-white hover:scale-105 transition-transform"
                   >
                     Custom Order
                   </Button>

@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
       alt: "Professional headshot of Indian woman with long black hair wearing blue blazer smiling at camera",
       rating: 5,
       testimonial:
-        `Papu and his team at PrintHub Pro exceeded all our expectations! We needed custom t-shirts for a corporate event with tight deadlines. Not only did they deliver on time, but the quality was outstanding. The prints were vibrant, durable, and exactly what we envisioned. The WhatsApp communication made everything so convenient. Highly recommended!`,
+        `Satya and his team at The PrintHub exceeded all our expectations! We needed custom t-shirts for a corporate event with tight deadlines. Not only did they deliver on time, but the quality was outstanding. The prints were vibrant, durable, and exactly what we envisioned. The WhatsApp communication made everything so convenient. Highly recommended!`,
       project: "Corporate Event T-Shirts",
       date: "November 2024"
     },
@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
       alt: "Professional headshot of Indian man with beard wearing white shirt and dark jacket in office setting",
       rating: 5,
       testimonial:
-        `Amazing work on our restaurant's menu boards and signage! Papu understood our vision perfectly and created designs that truly represent our brand. The large format printing quality is exceptional, and our customers constantly compliment the professional look. The personal attention and quick turnaround made all the difference.`,
+        `Amazing work on our restaurant's menu boards and signage! Satya understood our vision perfectly and created designs that truly represent our brand. The large format printing quality is exceptional, and our customers constantly compliment the professional look. The personal attention and quick turnaround made all the difference.`,
       project: "Restaurant Signage & Menu Boards",
       date: "October 2024"
     },
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
       alt: "Professional headshot of Indian woman with shoulder-length hair wearing red traditional top smiling warmly",
       rating: 5,
       testimonial:
-        `PrintHub Pro has become our go-to partner for custom mugs and personalized gifts. The attention to detail is incredible, and Papu always goes the extra mile to ensure customer satisfaction. Our customers love the quality, and we've seen a significant increase in repeat orders. The pricing is fair, and the service is exceptional.`,
+        `thePrintHub has become our go-to partner for custom mugs and personalized gifts. The attention to detail is incredible, and Satya always goes the extra mile to ensure customer satisfaction. Our customers love the quality, and we've seen a significant increase in repeat orders. The pricing is fair, and the service is exceptional.`,
       project: "Custom Mugs & Personalized Gifts",
       date: "November 2024"
     },
@@ -56,28 +56,32 @@ const TestimonialsSection = () => {
       alt: "Professional headshot of Indian man with short hair wearing blue sports jersey smiling confidently",
       rating: 5,
       testimonial:
-        `Our cricket team needed custom jerseys with specific designs and player names. PrintHub Pro delivered exactly what we wanted! The fabric quality is excellent, the prints are sharp and vibrant, and they've held up perfectly through multiple matches and washes. Papu's dedication to getting every detail right is commendable.`,
+        `Our cricket team needed custom jerseys with specific designs and player names. the PrintHub delivered exactly what we wanted! The fabric quality is excellent, the prints are sharp and vibrant, and they've held up perfectly through multiple matches and washes. Satya's dedication to getting every detail right is commendable.`,
       project: "Custom Cricket Team Jerseys",
       date: "October 2024"
     }
   ];
 
-  // simple autoplay
+  // autoplay interval (3 seconds)
+  const AUTOPLAY_MS = 3000;
+
+  // autoplay
   useEffect(() => {
+    // guard: clear existing before creating (prevents duplicates)
+    if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrent((p) => (p + 1) % testimonials.length);
-    }, 8000);
-
+    }, AUTOPLAY_MS);
     return () => clearInterval(timerRef.current);
   }, [testimonials.length]);
 
   const goTo = (i) => {
-    clearInterval(timerRef.current);
+    // restart timer when user interacts
+    if (timerRef.current) clearInterval(timerRef.current);
     setCurrent(i);
-    // restart autoplay
     timerRef.current = setInterval(() => {
       setCurrent((p) => (p + 1) % testimonials.length);
-    }, 8000);
+    }, AUTOPLAY_MS);
   };
 
   const prev = () => setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length);
@@ -85,9 +89,9 @@ const TestimonialsSection = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      "Hi Papu! I read the testimonials on your site. I'd like to discuss custom printing — can you help?"
+      "Hi Satya! I read the testimonials on your site. I'd like to discuss custom printing — can you help?"
     );
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   const renderStars = (rating) =>
@@ -99,7 +103,7 @@ const TestimonialsSection = () => {
     <section
       className="py-16 lg:py-24 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(120deg, rgba(8,37,64,1) 0%, rgba(4,12,20,1) 60%, rgba(0,0,0,1) 100%)'
+        background: 'linear-gradient(60deg, rgba(8,37,64,1) 0%, rgba(4,12,20,1) 60%, rgba(0,0,0,1) 100%)'
       }}
     >
       {/* animated horizontal gradient */}
@@ -129,59 +133,76 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Main testimonial */}
+        {/* MAIN: slide stack with fixed responsive height */}
         <div className="relative max-w-4xl mx-auto mb-10">
-          {testimonials.map((t, idx) => {
-            const active = idx === current;
-            return (
-              <article
-                key={t.id}
-                aria-hidden={!active}
-                aria-live={active ? 'polite' : 'off'}
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  active ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-6 z-0 pointer-events-none'
-                }`}
-              >
-                <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 text-center">
-                  <div className="flex justify-center mb-6">
-                    <div className="relative">
-                      <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-100">
-                        {/* don't pass unknown props to AppImage; keep simple */}
-                        <Image src={t.image} alt={t.alt} className="w-full h-full object-cover" />
+          <div className="relative w-full h-[420px] md:h-[480px] lg:h-[520px]">
+            {testimonials.map((t, idx) => {
+              const active = idx === current;
+              return (
+                <article
+                  key={t.id}
+                  aria-hidden={!active}
+                  aria-live={active ? 'polite' : 'off'}
+                  className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
+                    active ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-6 z-0 pointer-events-none'
+                  }`}
+                >
+                  {/* Card (constrained width + internal scroll) */}
+                  <div
+                    className="bg-white rounded-2xl shadow-lg w-full max-w-[900px] p-6 lg:p-10 text-center"
+                    style={{
+                      maxHeight: '480px',
+                      overflow: 'auto'
+                    }}
+                  >
+                    <div className="flex justify-center mb-6">
+                      <div className="relative">
+                        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-100">
+                          <Image src={t.image} alt={t.alt} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full bg-yellow-300 flex items-center justify-center">
+                          <Icon name="Quote" size={14} className="text-black" />
+                        </div>
                       </div>
-                      <div className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full bg-yellow-300 flex items-center justify-center">
-                        <Icon name="Quote" size={14} className="text-black" />
+                    </div>
+
+                    <div className="flex justify-center space-x-1 mb-4">{renderStars(t.rating)}</div>
+
+                    <blockquote
+                      className="text-lg lg:text-xl text-slate-800 leading-relaxed mb-6 font-medium"
+                      style={{
+                        display: '-webkit-box',
+                        WebkitLineClamp: 7,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                      }}
+                    >
+                      “{t.testimonial}”
+                    </blockquote>
+
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-semibold text-slate-900">{t.name}</h4>
+                      <p className="text-sm text-slate-600">
+                        {t.role} at {t.company}
+                      </p>
+
+                      <div className="flex items-center justify-center gap-6 text-xs text-slate-500 mt-3">
+                        <span className="flex items-center gap-2">
+                          <Icon name="Package" size={12} />
+                          <span>{t.project}</span>
+                        </span>
+                        <span className="flex items-center gap-2">
+                          <Icon name="Calendar" size={12} />
+                          <span>{t.date}</span>
+                        </span>
                       </div>
                     </div>
                   </div>
-
-                  <div className="flex justify-center space-x-1 mb-4">{renderStars(t.rating)}</div>
-
-                  <blockquote className="text-lg lg:text-xl text-slate-800 leading-relaxed mb-6 font-medium">
-                    “{t.testimonial}”
-                  </blockquote>
-
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-semibold text-slate-900">{t.name}</h4>
-                    <p className="text-sm text-slate-600">
-                      {t.role} at {t.company}
-                    </p>
-
-                    <div className="flex items-center justify-center gap-6 text-xs text-slate-500 mt-3">
-                      <span className="flex items-center gap-2">
-                        <Icon name="Package" size={12} />
-                        <span>{t.project}</span>
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <Icon name="Calendar" size={12} />
-                        <span>{t.date}</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+                </article>
+              );
+            })}
+          </div>
 
           {/* arrows */}
           <button
