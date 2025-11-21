@@ -48,7 +48,7 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-poppins font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight drop-shadow-md">
-            Your Vision, <span className="text-gray-100">Our Craft</span>
+            Vision, <span className="text-gray-100">Our Craft</span>
           </h1>
 
           <p className="font-inter text-lg text-white/95 max-w-xl lg:mx-0 leading-relaxed">
