@@ -8,6 +8,7 @@ import AboutPreview from './components/AboutPreview';
 import TestimonialsSection from './components/TestimonialsSection';
 import CTASection from './components/CTASection';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   useEffect(() => {
@@ -66,38 +67,21 @@ const Homepage = () => {
         <FloatingWhatsApp />
 
         {/* Footer */}
-        <footer className="bg-black text-white py-12 border-t border-white/10">
+        <footer className="bg-orange-400 text-white py-12 border-t border-white/10">
           <div className="container-brand">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               
               {/* Company Info */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <svg 
-                    width="32" 
-                    height="32" 
-                    viewBox="0 0 40 40" 
-                    className="text-yellow-300"
-                  >
-                    <circle 
-                      cx="20" 
-                      cy="20" 
-                      r="18" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2"
-                    />
-                    <path 
-                      d="M12 20h16M20 12v16" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  <div>
-                    <h3 className="text-lg font-brand font-bold text-white">PrintHub Pro</h3>
-                    <p className="text-xs text-white/70">Your Vision, Our Craft</p>
-                  </div>
+                <Link to="/homepage" className="flex items-center gap-3 group">
+                  <img
+                    src="../Logo.png"
+                    alt="PrintHub Logo"
+                    className="h-14 object-contain transition-transform duration-300 group-hover:scale-150 "
+                  />
+                </Link>
+                
                 </div>
 
                 <p className="text-sm text-white/80 leading-relaxed">
@@ -133,13 +117,13 @@ const Homepage = () => {
               <div className="space-y-4">
                 <h4 className="font-semibold text-white">Get in Touch</h4>
                 <div className="space-y-3 text-sm">
-                  <a href="tel:+919876543210" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
+                  <a href="tel:+917992801158" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
                     <span>📞</span>
-                    <span>+91 98765 43210</span>
+                    <span>+91 79928 01158</span>
                   </a>
-                  <a href="mailto:hello@printhubpro.com" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
+                  <a href="mailto:theprinthub.in@gmail.com" className="flex items-center space-x-2 text-white/80 hover:text-yellow-300 transition-colors">
                     <span>✉️</span>
-                    <span>hello@printhubpro.com</span>
+                    <span>theprinthub.in@gmail.com</span>
                   </a>
                   <div className="flex items-center space-x-2 text-white/80">
                     <span>🕒</span>
@@ -153,7 +137,7 @@ const Homepage = () => {
             {/* Bottom Bar */}
             <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-sm text-white/60">
-                © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. Founded by Satya Prakash Subudhi (Papu).
+                © {new Date()?.getFullYear()} The PrintHub All rights reserved. Founded by Satya Prakash Subudhi .
               </p>
               <div className="flex items-center space-x-4 text-sm text-white/60">
                 <span>Made with ❤️ for custom printing</span>

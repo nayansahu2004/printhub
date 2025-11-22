@@ -66,7 +66,7 @@ const Services = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="/services" />
       </Helmet>
-      <div className="min-h-screen bg-background">
+      <div className="pt-16 lg:pt-20">
         <Header />
         
         {/* Hero Section */}
@@ -168,11 +168,11 @@ const Services = () => {
 
             <div className="border-t border-white/20 mt-8 pt-8 text-center">
               <p className="text-sm text-white/80">
-                © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Founded by Satya Prakash Subudhi (Papu)
+                © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Founded by Satya Prakash Subudhi 
               </p>
             </div>
           </div>
-        </footer>
+        </footer> 
       </div>
     </>
   );

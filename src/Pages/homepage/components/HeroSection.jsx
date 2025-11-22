@@ -6,37 +6,9 @@ import Image from "../../../components/AppImage";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex overflow-hidden text-white px-6 bg-print-gradient animate-bgShift">
+    <section className="relative min-h-screen flex overflow-hidden text-white px-18 bg-print-gradient animate-bgShift">
       {/* gentle overlay glow (keeps gradient vivid, no full dark mask) */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 pointer-events-none"
-        style={{ mixBlendMode: "overlay", opacity: 0.18 }}
-      />
-
-      {/* lightweight decorative blobs (lower cost than huge blurred svgs) */}
-      <div
-        aria-hidden
-        className="absolute -z-20 left-[-10%] top-[-15%] w-[700px] h-[700px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 30% 30%, rgba(255,200,90,0.22), rgba(255,120,60,0.06) 35%, transparent 60%)",
-          filter: "blur(48px)",
-          animation: "blobX 10s ease-in-out infinite",
-          transform: "translateZ(0)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="absolute -z-20 right-[-12%] bottom-[-20%] w-[900px] h-[900px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 70% 70%, rgba(95,200,140,0.18), rgba(80,150,255,0.06) 30%, transparent 60%)",
-          filter: "blur(64px)",
-          animation: "blobXrev 16s ease-in-out infinite",
-          transform: "translateZ(0)",
-        }}
-      />
+      
 
       {/* CONTENT */}
       <div className="relative z-10 container mx-auto py-10 grid lg:grid-cols-2 gap-16 items-center">

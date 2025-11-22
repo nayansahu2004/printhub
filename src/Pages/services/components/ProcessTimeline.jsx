@@ -54,7 +54,7 @@ const ProcessTimeline = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-[#081426]">
       <div className="container-brand">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -63,11 +63,11 @@ const ProcessTimeline = () => {
             <span className="text-sm font-medium uppercase tracking-wider">Our Process</span>
           </div>
           
-          <h2 className="text-brand-title text-foreground mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
             From Concept to Creation
           </h2>
           
-          <p className="text-brand-body text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-white/85 max-w-2xl mx-auto">
             Our streamlined 6-step process ensures your custom printing project is handled with care, precision, and delivered on time.
           </p>
         </div>
@@ -77,9 +77,7 @@ const ProcessTimeline = () => {
           {/* Desktop Timeline */}
           <div className="hidden lg:block">
             <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-border transform -translate-y-1/2"></div>
-              
+         
               {/* Steps */}
               <div className="grid grid-cols-6 gap-4">
                 {steps?.map((step, index) => (
@@ -91,17 +89,18 @@ const ProcessTimeline = () => {
                     
                     {/* Step Content */}
                     <div className="text-center space-y-2">
-                      <div className="text-xs font-medium text-brand-energy uppercase tracking-wider">
+                      <div className="text-xs font-bold text-white uppercase tracking-wider">
                         Step {step?.id}
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground">
+                      <h3 className="text-lg text-white font-semibold text-foreground">
                         {step?.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-white text-muted-foreground leading-relaxed">
                         {step?.description}
                       </p>
-                      <div className="inline-flex items-center space-x-1 text-xs text-brand-energy font-medium">
+                      <div className="inline-flex items-center text-xs text-white font-medium">
                         <Icon name="Clock" size={12} />
+                    
                         <span>{step?.duration}</span>
                       </div>
                     </div>
@@ -128,16 +127,16 @@ const ProcessTimeline = () => {
                   
                   {/* Step Content */}
                   <div className="flex-1 space-y-2">
-                    <div className="text-xs font-medium text-brand-energy uppercase tracking-wider">
+                    <div className="text-xs font-medium text-white uppercase tracking-wider">
                       Step {step?.id}
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-lg text-white font-semibold text-foreground">
                       {step?.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-white text-muted-foreground leading-relaxed">
                       {step?.description}
                     </p>
-                    <div className="inline-flex items-center space-x-1 text-xs text-brand-energy font-medium">
+                    <div className="inline-flex items-center space-x-1 text-xs text-white font-medium">
                       <Icon name="Clock" size={12} />
                       <span>{step?.duration}</span>
                     </div>

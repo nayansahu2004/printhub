@@ -19,12 +19,12 @@ const ServiceCard = ({ service, onQuoteRequest, onLearnMore }) => {
   } = service;
 
   return (
-    <div className={`card-brand group hover:scale-105 transition-all duration-300 ${
+    <div className={`relative card-brand group hover:scale-105 transition-all duration-300 overflow-visible ${
       isPopular ? 'ring-2 ring-brand-energy shadow-brand-lg' : ''
     }`}>
       {/* Popular Badge */}
       {isPopular && (
-        <div className="absolute -top-3 left-6 bg-brand-energy text-white px-4 py-1 rounded-full text-sm font-medium">
+        <div className="absolute -top-3 left-6 z-20 bg-brand-energy text-white px-4 py-1 rounded-full text-sm font-medium">
           Most Popular
         </div>
       )}

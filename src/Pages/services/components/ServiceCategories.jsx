@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import ServiceCard from './ServiceCard';
+import Button from '../../../components/ui/Button'
 
 const ServiceCategories = ({ onQuoteRequest, onLearnMore }) => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -135,14 +136,14 @@ const ServiceCategories = ({ onQuoteRequest, onLearnMore }) => {
   services?.filter((service) => service?.category === activeCategory);
 
   return (
-    <section className="py-16 bg-canvas">
+    <section className="py-16 bg-[#081426]">
       <div className="container-brand">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-brand-title text-foreground mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
             Our Premium Services
           </h2>
-          <p className="text-brand-body text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-white/85 max-w-2xl mx-auto">
             Discover our comprehensive range of customization services designed to bring your vision to life with exceptional quality and attention to detail.
           </p>
         </div>
@@ -150,18 +151,17 @@ const ServiceCategories = ({ onQuoteRequest, onLearnMore }) => {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories?.map((category) =>
-          <button
-            key={category?.id}
-            onClick={() => setActiveCategory(category?.id)}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-            activeCategory === category?.id ?
-            'bg-brand-energy text-white shadow-brand' :
-            'bg-white text-foreground hover:bg-muted border border-border'}`
-            }>
-
-              <Icon name={category?.icon} size={18} />
-              <span>{category?.name}</span>
-            </button>
+          <Button
+          key={category?.id}
+          variant={activeCategory === category?.id ? "default" : "outline"}
+          size="lg"
+          iconName={category?.icon}
+          iconPosition="left"
+          onClick={() => setActiveCategory(category?.id)}
+          className="transition-all duration-200 bg-white text-brand-energy hover:bg-black hover:text-white"
+        >
+          {category?.name}
+        </Button>
           )}
         </div>
 

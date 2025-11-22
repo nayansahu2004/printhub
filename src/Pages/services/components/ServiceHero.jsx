@@ -5,12 +5,12 @@ import Button from '../../../components/ui/Button';
 
 const ServiceHero = ({ onWhatsAppClick }) => {
   return (
-    <section className="relative bg-gradient-brand text-white py-20 lg:py-32 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 canvas-texture opacity-10"></div>
+    <section className="relative min-h-screen flex overflow-hidden text-white px-6 bg-print-gradient animate-bgShift">
       
-      <div className="container-brand relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      
+      {/* TOP-ALIGN FIX: added top padding and set grid to items-start */}
+      <div className="container-brand relative z-10 pt-10 lg:pt-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
