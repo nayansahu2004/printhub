@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Icon from "../AppIcon";
 import Button from "./Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,13 @@ const Header = () => {
 
   const handleWhatsAppClick = () => {
     const msg = encodeURIComponent("Hi Satya, I'm interested in custom printing services. Can you help me get started?");
-    window.open(`https://wa.me/919937643338?text=${msg}`, "_blank");
+    window.open(`https://wa.me/917992801158?text=${msg}`, "_blank");
+  };
+  const handleInstaClick = () => {
+    window.open("https://instagram.com/the_printhub.in", "_blank");
+  };
+  const handlePhoneClick = () => {
+    window.open("tel:+917992801158");
   };
 
   const isActivePath = (p) => location.pathname === p;
@@ -42,9 +49,9 @@ const Header = () => {
           {/* LOGO */}
           <Link to="/homepage" className="flex items-center gap-3 group">
             <img
-              src="/Logo.svg"
+              src="/Logo.png"
               alt="PrintHub Logo"
-              className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+              className="w-18 h-18 object-contain transition-transform duration-300 group-hover:scale-150 "
             />
           </Link>
 
@@ -103,17 +110,31 @@ const Header = () => {
 
           {/* WHATSAPP + MOBILE ICONS */}
           <div className="flex items-center gap-3">
+          <Button 
+            size="sm"
+            className=" bg-primary text-white hover:text-primary hover:bg-white border-transparent transition-colors duration-200"
+            onClick = {handlePhoneClick}
+          >
+            <i class="fa-solid fa-phone text-m"></i>
+          </Button>
+          <Button 
+            size="sm"
+            className=" bg-pink-700 hover:bg-white hover:text-pink-700 text-white border-transparent transition-colors duration-200"
+            onClick = {handleInstaClick}
+          >
+            <i className="fa-brands fa-instagram text-xl"></i>
+          </Button>
             {/* DESKTOP WHATSAPP */}
             <div className="hidden sm:inline-flex">
               <Button
                 size="sm"
                 onClick={handleWhatsAppClick}
-                className="px-4 py-2 bg-green-600 text-white hover:bg-white hover:text-green-600 border-transparent transition-colors duration-200"
+                className="bg-whatsapp text-white hover:bg-white hover:text-green-600 border-transparent transition-colors duration-200"
               >
-                <Icon name="MessageCircle" size={18} />
-                <span>Chat Now</span>
+                <i class="fa-brands fa-whatsapp text-xl"></i>
               </Button>
             </div>
+            
 
             {/* MOBILE WHATSAPP */}
             <div className="sm:hidden">

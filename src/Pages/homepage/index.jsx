@@ -18,7 +18,7 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>PrintHub Pro - Your Vision, Our Craft | Custom Printing Services</title>
+        <title>The PrintHub | Your Vision Our Craft</title>
         <meta 
           name="description" 
           content="Transform your ideas into beautiful reality with PrintHub Pro. Expert custom printing services for t-shirts, mugs, phone cases, business cards & more. Founded by Papu in September 2024. Get instant quotes via WhatsApp!" 

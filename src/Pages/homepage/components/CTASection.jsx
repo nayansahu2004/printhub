@@ -6,7 +6,7 @@ import Icon from '../../../components/AppIcon';
 const CTASection = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi Satya! I'm ready to start my custom printing project. Can we discuss the details and get a quote?");
-    window.open(`https://wa.me/919937643338?text=${message}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   const quickActions = [
@@ -79,7 +79,7 @@ const CTASection = () => {
             </h2>
             
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Join hundreds of satisfied customers who have brought their visions to life with PrintHub Pro. 
+              Join hundreds of satisfied customers who have brought their visions to life with The PrintHub. 
               From concept to creation, we're here to make it happen.
             </p>
           </div>
@@ -194,18 +194,18 @@ const CTASection = () => {
             </h3>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80">
               <a
-                href="tel:+919876543210"
+                href="tel:+917992801158"
                 className="flex items-center space-x-2 hover:text-white transition-colors"
               >
                 <Icon name="Phone" size={18} />
-                <span>+91 72055 40108</span>
+                <span>+91 79928 01158</span>
               </a>
               <a
-                href="mailto:hello@printhubpro.com"
+                href="mailto:theprinthub.in@gmail.com"
                 className="flex items-center space-x-2 hover:text-white transition-colors"
               >
                 <Icon name="Mail" size={18} />
-                <span>hello@printhubpro.com</span>
+                <span>theprinthub.in@gmail.com</span>
               </a>
             </div>
             <p className="text-sm text-white/60">

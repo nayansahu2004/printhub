@@ -66,8 +66,8 @@ const AboutPreview = () => {
   }];
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Papu! I'd love to learn more about PrintHub Pro and discuss a potential project. Can we chat?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya! I'd love to learn more about The PrintHub and discuss a potential project. Can we chat?");
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (

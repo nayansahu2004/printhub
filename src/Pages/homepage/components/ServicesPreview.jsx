@@ -65,7 +65,7 @@ const ServicesPreview = () => {
 
   const handleWhatsAppInquiry = (serviceName) => {
     const message = encodeURIComponent(`Hi Papu! I'm interested in your ${serviceName} service. Can you provide more details and pricing?`);
-    window.open(`https://wa.me/919937643338?text=${message}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (

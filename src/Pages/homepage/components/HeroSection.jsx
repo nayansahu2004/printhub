@@ -63,8 +63,8 @@ const HeroSection = () => {
               iconPosition="left"
               className="px-10 py-5 bg-whatsapp text-white font-semibold hover:bg-white hover:scale-105 transition-transform hover:text-black"
               onClick={() => {
-                const msg = encodeURIComponent("Hi! I want to customize a printing order.");
-                window.open(`https://wa.me/919937643338?text=${msg}`, "_blank");
+                const msg = encodeURIComponent("Hi Satya! I want to customize a printing order.");
+                window.open(`https://wa.me/917992801158?text=${msg}`, "_blank");
               }}
             >
               Chat with Satya

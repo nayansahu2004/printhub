@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
       alt: "Professional headshot of Indian woman with shoulder-length hair wearing red traditional top smiling warmly",
       rating: 5,
       testimonial:
-        `thePrintHub has become our go-to partner for custom mugs and personalized gifts. The attention to detail is incredible, and Satya always goes the extra mile to ensure customer satisfaction. Our customers love the quality, and we've seen a significant increase in repeat orders. The pricing is fair, and the service is exceptional.`,
+        `The PrintHub has become our go-to partner for custom mugs and personalized gifts. The attention to detail is incredible, and Satya always goes the extra mile to ensure customer satisfaction. Our customers love the quality, and we've seen a significant increase in repeat orders. The pricing is fair, and the service is exceptional.`,
       project: "Custom Mugs & Personalized Gifts",
       date: "November 2024"
     },
@@ -129,7 +129,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-white">What Our Customers Say</h2>
 
           <p className="text-white/80 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers have to say about their experience with PrintHub Pro and the quality of our work.
+            Don't just take our word for it. Here's what our satisfied customers have to say about their experience with The PrintHub and the quality of our work.
           </p>
         </div>
 

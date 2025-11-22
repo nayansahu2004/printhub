@@ -84,7 +84,7 @@ const FeaturedWork = () => {
 
   const handleWhatsAppInquiry = (projectTitle) => {
     const message = encodeURIComponent(`Hi Papu! I saw the "${projectTitle}" project on your website. I'd like to discuss a similar custom printing project. Can you help?`);
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (
