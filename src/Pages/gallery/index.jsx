@@ -397,43 +397,55 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-canvas">
       <Helmet>
-        <title>Gallery - PrintHub Pro | Custom Printing Portfolio & Customer Success Stories</title>
+        <title>Gallery - The PrintHub | Custom Printing Portfolio & Customer Success Stories</title>
         <meta name="description" content="Explore our gallery of custom printing projects including apparel, mugs, bags, home decor, and business materials. See real customer success stories and transformations." />
         <meta name="keywords" content="custom printing gallery, customer success stories, custom apparel, personalized mugs, branded merchandise, PrintHub Pro portfolio" />
       </Helmet>
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-brand text-white py-20">
+        <section className="bg-[#081426] text-white py-20">
           <div className="container-brand text-center">
-            <h1 className="text-brand-hero text-white mb-6">
+
+            {/* Header — TEXT UNCHANGED, ONLY STYLE UPDATED */}
+            <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Our Creative Gallery
             </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+
+            <p className="text-base text-white/85 max-w-3xl mx-auto mb-8">
               Discover the magic of custom printing through our portfolio of successful projects. 
               Each piece tells a unique story of creativity, quality, and customer satisfaction.
             </p>
+
+            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              {/* WhatsApp-style Primary Button */}
               <Button
-                variant="secondary"
+                variant="default"
                 size="lg"
                 iconName="MessageCircle"
                 iconPosition="left"
                 onClick={handleWhatsAppContact}
-                className="whatsapp-pulse">
-
+                className="bg-whatsapp text-white hover:bg-white hover:text-black transition-colors duration-300"
+              >
                 Start Your Project
               </Button>
+
+              {/* Outline Button */}
               <Button
                 variant="outline"
                 size="lg"
                 iconName="ArrowDown"
                 iconPosition="left"
-                onClick={() => document.getElementById('gallery-content')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-white text-white hover:bg-white hover:text-brand-energy">
-
+                onClick={() =>
+                  document.getElementById('gallery-content')?.scrollIntoView({ behavior: 'smooth' })
+                }
+                className="border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+              >
                 Explore Gallery
               </Button>
+
             </div>
           </div>
         </section>
