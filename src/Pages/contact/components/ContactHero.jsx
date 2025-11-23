@@ -4,18 +4,19 @@ import Button from '../../../components/ui/Button';
 
 const ContactHero = ({ onWhatsAppClick }) => {
   return (
-    <section className="relative bg-gradient-brand text-white py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-[#081426] text-white py-16 lg:py-24 overflow-hidden min-h-screen flex items-center">
       {/* Background Pattern */}
-      <div className="absolute inset-0 canvas-texture opacity-10"></div>
+      <div className="absolute inset-0 canvas-texture opacity-12 pointer-events-none"></div>
       
       <div className="container-brand relative">
-        <div className="max-w-4xl mx-auto text-center space-brand-lg">
+        <div className="max-w-4xl mx-auto text-center space-y-8 flex flex-col justify-center h-full">
+          
           {/* Hero Content */}
-          <div className="space-brand-md">
-            <h1 className="text-brand-hero text-white">
+          <div className="space-y-4">
+            <h1 className="text-3xl lg:text-4xl font-bold text-white">
               Let's Bring Your Vision to Life
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 font-body max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base lg:text-lg text-white/85 max-w-3xl mx-auto leading-relaxed">
               Ready to create something amazing? We're here to help you every step of the way. 
               From concept to completion, your custom printing journey starts with a simple conversation.
             </p>
@@ -24,23 +25,24 @@ const ContactHero = ({ onWhatsAppClick }) => {
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              variant="success"
+              variant="default"
               size="lg"
               iconName="MessageCircle"
               iconPosition="left"
               onClick={onWhatsAppClick}
-              className="whatsapp-pulse text-lg px-8 py-4"
+              className="bg-whatsapp text-white hover:bg-white hover:text-black transition-colors duration-300 px-6 py-3"
             >
               Start Your Project on WhatsApp
             </Button>
+
             <div className="flex items-center space-x-2 text-white/80">
               <Icon name="Clock" size={16} />
-              <span className="text-sm font-body">Usually responds within 5 minutes</span>
+              <span className="text-sm">Usually responds within 5 minutes</span>
             </div>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/10">
             <div className="text-center">
               <div className="text-2xl font-bold text-white">500+</div>
               <div className="text-sm text-white/80">Happy Customers</div>
@@ -58,6 +60,7 @@ const ContactHero = ({ onWhatsAppClick }) => {
               <div className="text-sm text-white/80">Quality Guarantee</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

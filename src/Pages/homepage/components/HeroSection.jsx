@@ -93,7 +93,7 @@ const HeroSection = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
               <div className="absolute inset-0 z-0 hidden sm:block">
                 <Image
-                  src="https://images.unsplash.com/photo-1678930427386-94874763acab?v=1&q=80&w=1600&auto=format&fit=crop"
+                  src="./totebags.jpg"
                   alt="Colorful printed product sample"
                   className="w-full h-full object-cover opacity-0 scale-[1.05] transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"
                 />

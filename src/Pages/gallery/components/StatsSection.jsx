@@ -30,30 +30,37 @@ const StatsSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-brand text-white py-16 mb-12 rounded-2xl">
-      <div className="container-brand">
+    <div className="bg-[#081426] text-white py-16">
+      {/* full-width background; content centered with same container padding as other pages */}
+      <div className="container mx-auto px-6">
+        {/* HEADER — STYLING COPIED EXACTLY AS YOU PROVIDED */}
         <div className="text-center mb-12">
-          <h2 className="text-brand-title text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Our Gallery by Numbers
           </h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
+
+          <p className="text-base text-white/85 max-w-2xl mx-auto">
             Every project in our gallery represents a story of creativity, quality, and customer satisfaction
           </p>
         </div>
 
+        {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats?.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full mb-4">
                 <Icon name={stat?.icon} size={28} className="text-white" />
               </div>
-              <div className="text-3xl lg:text-4xl font-bold mb-2">
+
+              <div className="text-3xl lg:text-4xl font-bold mb-2 text-white">
                 {stat?.value}
               </div>
-              <div className="text-lg font-semibold mb-1">
+
+              <div className="text-lg font-semibold mb-1 text-white">
                 {stat?.label}
               </div>
-              <div className="text-sm opacity-80">
+
+              <div className="text-sm text-white/80">
                 {stat?.description}
               </div>
             </div>

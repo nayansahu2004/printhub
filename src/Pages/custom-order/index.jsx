@@ -123,7 +123,7 @@ const CustomOrderPage = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Order - PrintHub Pro | Your Vision, Our Craft</title>
+        <title>Custom Order - The PrintHub | Your Vision, Our Craft</title>
         <meta name="description" content="Place your custom printing order with PrintHub Pro. Easy ordering process with real-time WhatsApp support, design upload, and instant quotes." />
         <meta name="keywords" content="custom order, printing services, t-shirt printing, mug printing, personalized gifts, custom design" />
       </Helmet>
@@ -131,46 +131,63 @@ const CustomOrderPage = () => {
         <Header />
         
         {/* Hero Section */}
-        <section className="pt-20 lg:pt-24 pb-12 bg-gradient-brand">
+        <section className="min-h-screen flex items-center justify-center bg-[#081426] pt-20 lg:pt-24 pb-12">
           <div className="container-brand">
-            <div className="text-center text-white">
-              <h1 className="text-brand-hero mb-4">
+            <div className="text-center text-white flex flex-col items-center justify-center space-y-8">
+
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-2">
                 Create Your Custom Order
               </h1>
-              <p className="text-xl font-body mb-8 max-w-2xl mx-auto">
+
+              <p className="text-lg lg:text-xl text-white/85 max-w-2xl mx-auto">
                 Bring your vision to life with our streamlined ordering process and real-time WhatsApp support
               </p>
-              
+
               {/* Progress Steps */}
-              <div className="flex items-center justify-center space-x-2 md:space-x-4 mb-8">
+              <div className="flex items-center justify-center space-x-2 md:space-x-4">
                 {steps?.map((step, index) => (
                   <React.Fragment key={step?.id}>
-                    <div className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
-                      currentStep >= step?.id
-                        ? 'bg-white/20 text-white' :'bg-white/10 text-white/60'
-                    }`}>
-                      <Icon 
-                        name={step?.icon} 
-                        size={16} 
-                        className={currentStep >= step?.id ? 'text-white' : 'text-white/60'} 
+
+                    {/* Step Box */}
+                    <div
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-base lg:text-lg transition-all duration-300 ${
+                        currentStep >= step?.id
+                          ? 'bg-white/20 text-white shadow-sm'
+                          : 'bg-white/10 text-white/60'
+                      }`}
+                    >
+                      <Icon
+                        name={step?.icon}
+                        size={18}
+                        className={currentStep >= step?.id ? 'text-white' : 'text-white/60'}
                       />
-                      <span className="hidden md:block text-sm font-medium">
+
+                      <span className="hidden md:block font-medium">
                         {step?.name}
                       </span>
                     </div>
+
+                    {/* Line Arrow */}
                     {index < steps?.length - 1 && (
-                      <Icon 
-                        name="ChevronRight" 
-                        size={16} 
-                        className={currentStep > step?.id ? 'text-white' : 'text-white/40'} 
+                      <Icon
+                        name="ChevronRight"
+                        size={18}
+                        className={
+                          currentStep > step?.id
+                            ? 'text-white'
+                            : 'text-white/40'
+                        }
                       />
                     )}
                   </React.Fragment>
                 ))}
               </div>
+
             </div>
           </div>
         </section>
+
+
 
         {/* Main Content */}
         <section className="py-12">

@@ -96,7 +96,7 @@ const VisionMission = () => {
         {/* Commitment Statement */}
         <div className="mt-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-brand rounded-2xl p-8 lg:p-12 text-white">
+            <div className="bg-gradient-brand rounded-2xl p-8 lg:p-12 text-[#081426]">
               <h2 className="text-2xl lg:text-3xl font-bold mb-6">Our Commitment to You</h2>
               <p className="text-lg mb-8 opacity-90">
                 At PrintHub Pro, we're not just creating products—we're crafting experiences, building relationships, and helping you tell your story. Every project is a promise kept, every delivery is trust earned.

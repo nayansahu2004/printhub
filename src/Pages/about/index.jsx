@@ -4,25 +4,26 @@ import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import FounderStory from './components/FounderStory';
 import VisionMission from './components/VisionMission';
+import { Link } from 'react-router-dom';
 import TeamSection from './components/TeamSection';
 
 const About = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Papu! I'd like to know more about PrintHub Pro and your custom printing services. Can you help me get started?");
+    const message = encodeURIComponent("Hi Satya! I'd like to know more about PrintHub Pro and your custom printing services. Can you help me get started?");
     window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>About Us - PrintHub Pro | Meet Papu & Our Story</title>
+        <title>About Us - The PrintHub | Meet Satya & Our Story</title>
         <meta 
           name="description" 
-          content="Meet Satya Prakash Subudhi (Papu), founder of PrintHub Pro. Learn about our journey since September 2024, craftsmanship philosophy, and commitment to transforming your vision into reality through expert custom printing services." 
+          content="Meet Satya Prakash Subudhi, founder of The PrintHub. Learn about our journey since September 2024, craftsmanship philosophy, and commitment to transforming your vision into reality through expert custom printing services." 
         />
-        <meta name="keywords" content="PrintHub Pro founder, Papu printing services, custom printing story, about PrintHub Pro, printing craftsmanship, personalized products India" />
-        <meta property="og:title" content="About PrintHub Pro - Your Vision, Our Craft" />
-        <meta property="og:description" content="Discover the story behind PrintHub Pro and meet the passionate team bringing your creative visions to life since September 2024." />
+        <meta name="keywords" content="The PrintHub founder, Satya printing services, custom printing story, about PrintHub Pro, printing craftsmanship, personalized products India" />
+        <meta property="og:title" content="About The PrintHub - Your Vision, Our Craft" />
+        <meta property="og:description" content="Discover the story behind The PrintHub and meet the passionate team bringing your creative visions to life since September 2024." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://printhubpro.com/about" />
       </Helmet>
@@ -31,7 +32,7 @@ const About = () => {
         <HeroSection onWhatsAppClick={handleWhatsAppClick} />
         <FounderStory />
         <VisionMission />
-        <TeamSection onWhatsAppClick={handleWhatsAppClick} />
+        {/* <TeamSection onWhatsAppClick={handleWhatsAppClick} /> */}
       </main>
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-40">
@@ -52,40 +53,83 @@ const About = () => {
         </button>
       </div>
       {/* Footer */}
-      <footer className="bg-foreground text-background py-8">
-        <div className="container-brand">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <svg 
-                width="32" 
-                height="32" 
-                viewBox="0 0 40 40" 
-                className="text-brand-energy"
-              >
-                <circle 
-                  cx="20" 
-                  cy="20" 
-                  r="18" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2"
-                />
-                <path 
-                  d="M12 20h16M20 12v16" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round"
-                />
-              </svg>
-              <h3 className="text-xl font-brand font-bold text-brand-energy">PrintHub Pro</h3>
+      <footer className="bg-white text-[#081426] py-12 border-t border-[#081426]/10">
+          <div className="container-brand">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+              {/* Company Info */}
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Link to="/homepage" className="flex items-center gap-3 group">
+                    <img
+                      src="../Logo.png"
+                      alt="PrintHub Logo"
+                      className="h-14 object-contain transition-transform duration-300 group-hover:scale-150"
+                    />
+                  </Link>
+                </div>
+
+                <p className="text-sm text-[#081426]/70 leading-relaxed">
+                  Transforming ideas into beautiful reality through expert custom printing and sublimation services since September 2024.
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Quick Links</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/services" className="text-[#081426]/70 hover:text-black transition-colors">Services</a></li>
+                  <li><a href="/gallery" className="text-[#081426]/70 hover:text-black transition-colors">Gallery</a></li>
+                  <li><a href="/about" className="text-[#081426]/70 hover:text-black transition-colors">About Us</a></li>
+                  <li><a href="/contact" className="text-[#081426]/70 hover:text-black transition-colors">Contact</a></li>
+                  <li><a href="/custom-order" className="text-[#081426]/70 hover:text-black transition-colors">Custom Order</a></li>
+                </ul>
+              </div>
+
+              {/* Services */}
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Our Services</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Custom T-Shirts</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Personalized Mugs</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Phone Cases</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Business Cards</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Banners & Signage</li>
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Get in Touch</h4>
+                <div className="space-y-3 text-sm">
+                  <a href="tel:+917992801158" className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>📞</span>
+                    <span>+91 79928 01158</span>
+                  </a>
+                  <a href="mailto:theprinthub.in@gmail.com" className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>✉️</span>
+                    <span>theprinthub.in@gmail.com</span>
+                  </a>
+                  <div className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>🕒</span>
+                    <span>Mon-Sat: 9 AM - 8 PM</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <p className="text-sm opacity-80 mb-4">Your Vision, Our Craft</p>
-            <p className="text-xs opacity-60">
-              © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Founded by Satya Prakash Subudhi (Papu)
-            </p>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-[#081426]/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-[#081426]/70">
+                © {new Date()?.getFullYear()} The PrintHub All rights reserved. Founded by Satya Prakash Subudhi .
+              </p>
+              <div className="flex items-center space-x-4 text-sm text-[#081426]/70">
+                <span>Made with ❤️ for custom printing</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
     </div>
   );
 };
