@@ -80,20 +80,22 @@ const PricingComparison = ({ onWhatsAppClick }) => {
   const currentPricing = pricingData?.[selectedQuantity];
 
   return (
-    <section className="py-16 bg-canvas">
+    <section className="py-16 bg-[#081426]">
       <div className="container-brand">
-        {/* Section Header */}
+        {/* Section Header — ORIGINAL TEXTS kept, styles updated to match hero */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 text-brand-energy mb-4">
             <Icon name="Calculator" size={24} />
             <span className="text-sm font-medium uppercase tracking-wider">Transparent Pricing</span>
           </div>
-          
-          <h2 className="text-brand-title text-foreground mb-4">
+
+          {/* h2 text kept exactly as originally written, but styled */}
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Affordable Pricing for Every Budget
           </h2>
-          
-          <p className="text-brand-body text-muted-foreground max-w-2xl mx-auto">
+
+          {/* paragraph text kept exactly as originally written, but styled */}
+          <p className="text-base text-white/85 max-w-2xl mx-auto">
             Our pricing is transparent and competitive. The more you order, the more you save with our bulk discounts.
           </p>
         </div>
@@ -120,7 +122,7 @@ const PricingComparison = ({ onWhatsAppClick }) => {
           {products?.map((product) => {
             const pricing = currentPricing?.[product?.id];
             const originalPrice = pricingData?.['1']?.[product?.id]?.price;
-            
+
             return (
               <div
                 key={product?.id}
@@ -139,11 +141,11 @@ const PricingComparison = ({ onWhatsAppClick }) => {
                   <div className="w-16 h-16 bg-brand-energy/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name={product?.icon} size={28} className="text-brand-energy" />
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {product?.name}
                   </h3>
-                  
+
                   <div className="space-y-1">
                     <div className="flex items-center justify-center space-x-2">
                       <span className="text-3xl font-bold text-brand-energy">
@@ -155,7 +157,7 @@ const PricingComparison = ({ onWhatsAppClick }) => {
                         </span>
                       )}
                     </div>
-                    
+
                     {pricing?.discount > 0 && (
                       <div className="inline-flex items-center space-x-1 bg-success/10 text-success px-2 py-1 rounded-full text-xs font-medium">
                         <Icon name="TrendingDown" size={12} />
@@ -196,15 +198,15 @@ const PricingComparison = ({ onWhatsAppClick }) => {
               <Icon name="Percent" size={24} />
               <span className="text-sm font-medium uppercase tracking-wider">Special Offer</span>
             </div>
-            
+
             <h3 className="text-2xl font-bold mb-4">
               Save Up to 50% on Bulk Orders
             </h3>
-            
+
             <p className="text-white/90 mb-6">
               The more you order, the more you save! Perfect for events, teams, businesses, and special occasions.
             </p>
-            
+
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-2xl font-bold">25% OFF</div>
@@ -219,13 +221,14 @@ const PricingComparison = ({ onWhatsAppClick }) => {
                 <div className="text-sm text-white/80">Orders 500+</div>
               </div>
             </div>
-            
+
             <Button
               variant="secondary"
               size="lg"
               iconName="Calculator"
               iconPosition="left"
               onClick={() => onWhatsAppClick('Bulk Order', 'Custom Quote')}
+              className="bg-white hover:ring-1 hover:ring-white border-brand-energy text-brand-energy hover:bg-brand-energy hover:text-white"
             >
               Calculate Bulk Savings
             </Button>

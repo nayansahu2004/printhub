@@ -7,6 +7,7 @@ import ProcessTimeline from './components/ProcessTimeline';
 import PricingComparison from './components/PricingComparison';
 import CustomerTestimonials from './components/CustomerTestimonials';
 import QuickQuoteModal from './components/QuickQuoteModal';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -111,68 +112,84 @@ const Services = () => {
         </div>
 
         {/* Footer */}
-        <footer className="bg-foreground text-white py-12">
+        <footer className="bg-white text-[#081426] py-12 border-t border-[#081426]/10">
           <div className="container-brand">
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
               {/* Company Info */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-brand-energy rounded-lg flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 40 40" className="text-white">
-                      <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M12 20h16M20 12v16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-brand font-bold">PrintHub Pro</h3>
-                    <p className="text-xs text-white/80">Your Vision, Our Craft</p>
-                  </div>
+                  <Link to="/homepage" className="flex items-center gap-3 group">
+                    <img
+                      src="../Logo.png"
+                      alt="PrintHub Logo"
+                      className="h-14 object-contain transition-transform duration-300 group-hover:scale-150"
+                    />
+                  </Link>
                 </div>
-                <p className="text-sm text-white/80">
-                  Premium custom printing services since September 2024. Transforming ideas into reality with quality and precision.
+
+                <p className="text-sm text-[#081426]/70 leading-relaxed">
+                  Transforming ideas into beautiful reality through expert custom printing and sublimation services since September 2024.
                 </p>
               </div>
 
               {/* Quick Links */}
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <div className="space-y-2">
-                  <a href="/homepage" className="block text-sm text-white/80 hover:text-white transition-colors">Home</a>
-                  <a href="/services" className="block text-sm text-white/80 hover:text-white transition-colors">Services</a>
-                  <a href="/gallery" className="block text-sm text-white/80 hover:text-white transition-colors">Gallery</a>
-                  <a href="/about" className="block text-sm text-white/80 hover:text-white transition-colors">About</a>
-                </div>
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Quick Links</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/services" className="text-[#081426]/70 hover:text-black transition-colors">Services</a></li>
+                  <li><a href="/gallery" className="text-[#081426]/70 hover:text-black transition-colors">Gallery</a></li>
+                  <li><a href="/about" className="text-[#081426]/70 hover:text-black transition-colors">About Us</a></li>
+                  <li><a href="/contact" className="text-[#081426]/70 hover:text-black transition-colors">Contact</a></li>
+                  <li><a href="/custom-order" className="text-[#081426]/70 hover:text-black transition-colors">Custom Order</a></li>
+                </ul>
               </div>
 
               {/* Services */}
-              <div>
-                <h4 className="font-semibold mb-4">Popular Services</h4>
-                <div className="space-y-2">
-                  <p className="text-sm text-white/80">Custom T-Shirts</p>
-                  <p className="text-sm text-white/80">Personalized Mugs</p>
-                  <p className="text-sm text-white/80">Business Cards</p>
-                  <p className="text-sm text-white/80">Phone Cases</p>
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Our Services</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Custom T-Shirts</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Personalized Mugs</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Phone Cases</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Business Cards</li>
+                  <li className="text-[#081426]/70 hover:text-black transition-colors">Banners & Signage</li>
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-4">
+                <h4 className="font-semibold text-[#081426]">Get in Touch</h4>
+                <div className="space-y-3 text-sm">
+                  <a href="tel:+917992801158" className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>📞</span>
+                    <span>+91 79928 01158</span>
+                  </a>
+                  <a href="mailto:theprinthub.in@gmail.com" className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>✉️</span>
+                    <span>theprinthub.in@gmail.com</span>
+                  </a>
+                  <div className="flex items-center space-x-2 text-[#081426]/70 hover:text-black transition-colors">
+                    <span>🕒</span>
+                    <span>Mon-Sat: 9 AM - 8 PM</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Contact */}
-              <div>
-                <h4 className="font-semibold mb-4">Contact Info</h4>
-                <div className="space-y-2">
-                  <p className="text-sm text-white/80">+91 98765 43210</p>
-                  <p className="text-sm text-white/80">info@printhubpro.com</p>
-                  <p className="text-sm text-white/80">Mumbai, Maharashtra</p>
-                </div>
-              </div>
             </div>
 
-            <div className="border-t border-white/20 mt-8 pt-8 text-center">
-              <p className="text-sm text-white/80">
-                © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Founded by Satya Prakash Subudhi 
+            {/* Bottom Bar */}
+            <div className="border-t border-[#081426]/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-[#081426]/70">
+                © {new Date()?.getFullYear()} The PrintHub All rights reserved. Founded by Satya Prakash Subudhi .
               </p>
+              <div className="flex items-center space-x-4 text-sm text-[#081426]/70">
+                <span>Made with ❤️ for custom printing</span>
+              </div>
             </div>
           </div>
-        </footer> 
+        </footer>
+ 
       </div>
     </>
   );

@@ -40,9 +40,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/60 backdrop-blur-md shadow-neutral" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white`}
     >
       <div className="container-brand">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -51,7 +49,7 @@ const Header = () => {
             <img
               src="/Logo.png"
               alt="PrintHub Logo"
-              className="h-14 object-contain transition-transform duration-300 group-hover:scale-150 "
+              className="h-14 object-contain transition-transform duration-300 group-hover:scale-105 "
             />
           </Link>
 
@@ -59,11 +57,17 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-2">
             {navigationItems.map((item) => {
               const active = isActivePath(item.path);
-              // shared classes so icon + text always match
+
+              // base: keep transform enabled so hover scale works
               const linkBase =
-                "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-300 ease-in-out transform hover:-translate-y-[0.5px]";
+                "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transform transition-all duration-200";
+
+              // active class kept as-is (no change)
               const activeClass = "bg-brand-energy text-white shadow-brand";
-              const inactiveClass = isScrolled ? "text-white hover:text-brand-energy" : "text-foreground hover:text-brand-energy";
+
+              // inactive: default #081426, on hover -> black + scale-105
+              const inactiveClass =
+                "text-[#081426] hover:text-black hover:scale-105";
 
               return (
                 <Link
@@ -71,8 +75,14 @@ const Header = () => {
                   to={item.path}
                   className={`${linkBase} ${active ? activeClass : inactiveClass}`}
                 >
-                  <Icon name={item.icon} size={18} className={active ? "text-white" : isScrolled ? "text-white" : "text-foreground"} />
-                  <span className={`${active ? "text-white" : isScrolled ? "text-white" : "text-foreground"}`}>{item.name}</span>
+                  <Icon
+                    name={item.icon}
+                    size={18}
+                    className={active ? "text-white" : "text-[#081426]"}
+                  />
+                  <span className={active ? "text-white" : "text-[#081426]"}>
+                    {item.name}
+                  </span>
                 </Link>
               );
             })}
@@ -80,11 +90,11 @@ const Header = () => {
             {/* MORE MENU */}
             <div className="relative group">
               <button
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-300 ease-in-out ${
-                  isScrolled ? "text-white hover:text-brand-energy" : "text-foreground hover:text-brand-energy"
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transform transition-all duration-200 ${
+                  "text-[#081426] hover:text-black hover:scale-105"
                 }`}
               >
-                <Icon name="MoreHorizontal" size={18} className={isScrolled ? "text-white" : "text-foreground"} />
+                <Icon name="MoreHorizontal" size={18} className="text-[#081426]" />
                 <span>More</span>
               </button>
 
@@ -95,11 +105,13 @@ const Header = () => {
                     <Link
                       key={item.path}
                       to={item.path}
-                      className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors duration-200 ${
-                        active ? "bg-brand-energy text-white" : "text-foreground hover:bg-muted hover:text-brand-energy"
+                      className={`flex items-center gap-3 px-4 py-3 text-sm transition-all duration-200 transform ${
+                        active
+                          ? "bg-brand-energy text-black"
+                          : "text-[#081426] hover:text-black hover:scale-105"
                       }`}
                     >
-                      <Icon name={item.icon} size={16} className={active ? "text-white" : "text-foreground"} />
+                      <Icon name={item.icon} size={16} className={active ? "text-black" : "text-[#081426]"} />
                       <span>{item.name}</span>
                     </Link>
                   );
@@ -110,20 +122,20 @@ const Header = () => {
 
           {/* WHATSAPP + MOBILE ICONS */}
           <div className="flex items-center gap-3">
-          <Button 
-            size="sm"
-            className=" bg-primary text-white hover:text-primary hover:bg-white border-transparent transition-colors duration-200"
-            onClick = {handlePhoneClick}
-          >
-            <i class="fa-solid fa-phone text-m"></i>
-          </Button>
-          <Button 
-            size="sm"
-            className=" bg-pink-700 hover:bg-white hover:text-pink-700 text-white border-transparent transition-colors duration-200"
-            onClick = {handleInstaClick}
-          >
-            <i className="fa-brands fa-instagram text-xl"></i>
-          </Button>
+            <Button 
+              size="sm"
+              className=" bg-primary text-white hover:text-primary hover:bg-white border-transparent transition-colors duration-200"
+              onClick = {handlePhoneClick}
+            >
+              <i className="fa-solid fa-phone text-m"></i>
+            </Button>
+            <Button 
+              size="sm"
+              className=" bg-pink-700 hover:bg-white hover:text-pink-700 text-white border-transparent transition-colors duration-200"
+              onClick = {handleInstaClick}
+            >
+              <i className="fa-brands fa-instagram text-xl"></i>
+            </Button>
             {/* DESKTOP WHATSAPP */}
             <div className="hidden sm:inline-flex">
               <Button
@@ -131,10 +143,9 @@ const Header = () => {
                 onClick={handleWhatsAppClick}
                 className="bg-whatsapp text-white hover:bg-white hover:text-green-600 border-transparent transition-colors duration-200"
               >
-                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <i className="fa-brands fa-whatsapp text-xl"></i>
               </Button>
             </div>
-            
 
             {/* MOBILE WHATSAPP */}
             <div className="sm:hidden">
@@ -153,7 +164,7 @@ const Header = () => {
                 size="icon"
                 iconName={isMenuOpen ? "X" : "Menu"}
                 onClick={() => setIsMenuOpen((v) => !v)}
-                className={`${isScrolled ? "text-white" : "text-foreground"}`}
+                className={`transform transition-all duration-200 ${"text-[#081426] hover:text-black hover:scale-105"}`}
                 aria-expanded={isMenuOpen}
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               />
@@ -178,18 +189,18 @@ const Header = () => {
           >
             {[...navigationItems, ...secondaryItems].map((item, idx) => {
               const active = isActivePath(item.path);
-              // item classes: dark text, full width, divider below
+              // item classes: default text #081426, hover black + scale
               return (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-4 text-sm font-medium transition-colors duration-200 ${
-                    active ? "bg-brand-energy text-white" : "text-foreground hover:text-brand-energy"
+                  className={`flex items-center gap-3 px-4 py-4 text-sm font-medium transition-all duration-200 transform ${
+                    active ? "bg-brand-energy text-white" : "text-[#081426] hover:text-black hover:scale-105"
                   } ${idx !== navigationItems.length + secondaryItems.length - 1 ? "border-b border-border" : ""}`}
                   role="menuitem"
                 >
-                  <Icon name={item.icon} size={20} className={active ? "text-white" : "text-foreground"} />
+                  <Icon name={item.icon} size={20} className={active ? "text-white" : "text-[#081426]"} />
                   <span>{item.name}</span>
                 </Link>
               );
