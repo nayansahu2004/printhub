@@ -66,7 +66,7 @@ const ServiceHero = ({ onWhatsAppClick }) => {
                 iconPosition="left"
                 className="border-white text-white hover:bg-white hover:text-brand-energy">
 
-                Call Now: +91 98765 43210
+                Call Now: +91 79928 01158
               </Button>
             </div>
           </div>

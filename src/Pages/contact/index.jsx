@@ -135,8 +135,8 @@ const ContactPage = () => {
             <div>
               <h4 className="font-semibold text-background mb-4">Contact Info</h4>
               <ul className="space-y-2 text-sm text-background/70">
-                <li>+91 98765 43210</li>
-                <li>hello@printhubpro.com</li>
+                <li>+91 79928 01158</li>
+                <li>theprinthub.in@gmail.com</li>
                 <li>Bhubaneswar, Odisha</li>
                 <li>Mon-Sat: 9 AM - 8 PM</li>
               </ul>

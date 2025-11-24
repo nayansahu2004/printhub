@@ -161,7 +161,7 @@ Can we discuss this project?`;
                       label="Phone Number"
                       type="tel"
                       name="phone"
-                      placeholder="+91 98765 43210"
+                      placeholder="++91 79928 01158"
                       value={formData?.phone}
                       onChange={handleInputChange}
                       description="We'll use this for WhatsApp communication"

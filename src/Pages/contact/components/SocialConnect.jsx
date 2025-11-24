@@ -30,7 +30,7 @@ const SocialConnect = ({ onWhatsAppClick }) => {
       id: 3,
       name: "WhatsApp",
       icon: "MessageCircle",
-      handle: "+91 98765 43210",
+      handle: "++91 79928 01158",
       description: "Instant support and quick order processing",
       followers: "24/7 available",
       url: "#",
