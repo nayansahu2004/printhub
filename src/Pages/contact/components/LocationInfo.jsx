@@ -4,8 +4,8 @@ import Button from '../../../components/ui/Button';
 
 const LocationInfo = ({ onWhatsAppClick }) => {
   const handleDirectionsClick = () => {
-    const message = encodeURIComponent("Hi Papu, I'd like to visit your studio. Can you share the exact location and best time to visit?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya, I'd like to visit your studio. Can you share the exact location and best time to visit?");
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (
@@ -34,7 +34,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                     <div className="flex items-start space-x-3">
                       <Icon name="Building" size={18} className="text-muted-foreground mt-1" />
                       <div>
-                        <div className="font-medium text-foreground">PrintHub Pro Studio</div>
+                        <div className="font-medium text-foreground">The Print Hub Studio</div>
                         <div className="text-muted-foreground">Professional Printing & Customization Center</div>
                       </div>
                     </div>
@@ -101,7 +101,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Icon name="Users" size={16} className="text-brand-energy" />
-                    <span className="text-sm text-foreground">Meet Papu and the team personally</span>
+                    <span className="text-sm text-foreground">Meet Satya and the team personally</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Icon name="Lightbulb" size={16} className="text-brand-energy" />
@@ -122,7 +122,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                   width="100%"
                   height="100%"
                   loading="lazy"
-                  title="PrintHub Pro Studio Location in Bhubaneswar"
+                  title="The Print Hub Studio Location in Bhubaneswar"
                   referrerPolicy="no-referrer-when-downgrade"
                   src="https://www.google.com/maps?q=20.2961,85.8245&z=14&output=embed"
                   className="border-0"

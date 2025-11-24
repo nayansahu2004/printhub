@@ -51,7 +51,7 @@ const HeroSection = ({ onWhatsAppClick }) => {
             <div className="relative overflow-hidden rounded-2xl shadow-brand-lg">
               <Image
                 src="./FounderImage.jpg"
-                alt="Satya Prakash Subudhi (Papu), founder of PrintHub Pro, smiling confidently in casual business attire with printing equipment in background"
+                alt="Satya Prakash Subudhi (Satya), founder of PrintHub Pro, smiling confidently in casual business attire with printing equipment in background"
                 className="w-full h-[500px] lg:h-[600px] object-cover" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

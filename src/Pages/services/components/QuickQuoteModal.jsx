@@ -107,7 +107,7 @@ const QuickQuoteModal = ({ isOpen, onClose, selectedService, onSubmit }) => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Create WhatsApp message
-      const message = `Hi Papu! I'd like to get a quote for:\n\n` +
+      const message = `Hi Satya! I'd like to get a quote for:\n\n` +
         `Name: ${formData?.name}\n` +
         `Phone: ${formData?.phone}\n` +
         `Email: ${formData?.email}\n` +
@@ -116,7 +116,7 @@ const QuickQuoteModal = ({ isOpen, onClose, selectedService, onSubmit }) => {
         `Urgency: ${formData?.urgency}\n` +
         `Requirements: ${formData?.description}`;
 
-      const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/917992801158?text=${encodeURIComponent("Hello Satya! I want to order from your site, whats the next step.")}`;
       
       onSubmit(formData, whatsappUrl);
       onClose();

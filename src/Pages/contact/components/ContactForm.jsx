@@ -105,7 +105,7 @@ const ContactForm = ({ onWhatsAppClick }) => {
   };
 
   const handleWhatsAppQuickStart = () => {
-    const projectDetails = `Hi Papu! I'm interested in ${formData?.service || 'custom printing services'}. 
+    const projectDetails = `Hi Satya! I'm interested in ${formData?.service || 'custom printing services'}. 
 Project Type: ${formData?.projectType || 'Not specified'}
 Budget: ${formData?.budget || 'To be discussed'}
 Timeline: ${formData?.timeline || 'Flexible'}
@@ -114,7 +114,7 @@ ${formData?.message ? `Additional Details: ${formData?.message}` : ''}
 Can we discuss this project?`;
     
     const message = encodeURIComponent(projectDetails);
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (

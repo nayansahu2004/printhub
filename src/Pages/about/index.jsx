@@ -9,8 +9,8 @@ import TeamSection from './components/TeamSection';
 
 const About = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Satya! I'd like to know more about PrintHub Pro and your custom printing services. Can you help me get started?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya! I'd like to know more about The Print Hub and your custom printing services. Can you help me get started?");
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (

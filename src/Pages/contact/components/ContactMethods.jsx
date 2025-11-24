@@ -31,7 +31,7 @@ const ContactMethods = ({ onWhatsAppClick }) => {
       icon: "Mail",
       title: "Email Support",
       description: "Detailed project discussions",
-      value: "hello@printhubpro.com",
+      value: "theprinthub.in@gmail.com",
       action: "Send Email",
       isPrimary: false,
       available: "Always Open",
@@ -56,14 +56,14 @@ const ContactMethods = ({ onWhatsAppClick }) => {
         onWhatsAppClick();
         break;
       case "Phone":
-        window.open("tel:+919876543210", "_self");
+        window.open("tel:+917992801158", "_self");
         break;
       case "Mail":
         window.open("mailto:hello@printhubpro.com?subject=Custom Printing Inquiry", "_self");
         break;
       case "MapPin":
-        const message = encodeURIComponent("Hi Papu, I'd like to schedule a visit to your studio. When would be a good time?");
-        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        const message = encodeURIComponent("Hi Satya, I'd like to schedule a visit to your studio. When would be a good time?");
+        window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
         break;
       default:
         break;

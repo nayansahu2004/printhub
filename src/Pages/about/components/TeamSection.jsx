@@ -7,15 +7,15 @@ const TeamSection = ({ onWhatsAppClick }) => {
   const teamMembers = [
   {
     id: 1,
-    name: "Satya Prakash Subudhi (Papu)",
+    name: "Satya Prakash Subudhi (Satya)",
     role: "Founder & Creative Director",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f55ffadb-1763299556335.png",
-    imageAlt: "Satya Prakash Subudhi (Papu), founder of PrintHub Pro, professional headshot with confident smile wearing casual business attire",
-    bio: "With a passion for design and years of experience in printing technology, Papu founded PrintHub Pro to bridge the gap between creativity and craftsmanship. His vision drives every project we undertake.",
+    imageAlt: "Satya Prakash Subudhi (Satya), founder of PrintHub Pro, professional headshot with confident smile wearing casual business attire",
+    bio: "With a passion for design and years of experience in printing technology, Satya founded The Print Hub to bridge the gap between creativity and craftsmanship. His vision drives every project we undertake.",
     expertise: ["Sublimation Printing", "Design Consultation", "Quality Control", "Customer Relations"],
     social: {
-      whatsapp: "+919876543210",
-      email: "papu@printhubpro.com"
+      whatsapp: "+917992801158",
+      email: "theprinthub.in@gmail.com"
     }
   },
   {
@@ -27,7 +27,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
     bio: "Priya brings artistic flair and technical expertise to every design project. Her attention to detail ensures that your vision is translated perfectly into the final product.",
     expertise: ["Graphic Design", "Color Matching", "Print Layout", "Creative Consultation"],
     social: {
-      email: "priya@printhubpro.com"
+      email: "theprinthub.in@gmail.com"
     }
   },
   {
@@ -39,7 +39,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
     bio: "Rahul oversees our production process, ensuring every item meets our high-quality standards. His technical knowledge and process optimization keep us running smoothly.",
     expertise: ["Production Planning", "Quality Assurance", "Equipment Maintenance", "Process Optimization"],
     social: {
-      email: "rahul@printhubpro.com"
+      email: "theprinthub.in@gmail.com"
     }
   }];
 
@@ -183,7 +183,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
                 size="lg"
                 iconName="Phone"
                 iconPosition="left"
-                onClick={() => window.open('tel:+919876543210', '_blank')}>
+                onClick={() => window.open('tel:+917992801158', '_blank')}>
 
                 Call Us Now
               </Button>

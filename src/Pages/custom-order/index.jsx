@@ -69,7 +69,7 @@ const CustomOrderPage = () => {
   const handleWhatsAppOrder = () => {
     const { product, design, quantity, selectedColor, selectedSize, urgent, notes } = orderDetails;
     
-    let message = `Hi Papu! I'd like to place a custom order:\n\n`;
+    let message = `Hi Satya! I'd like to place a custom order:\n\n`;
     message += `📦 Product: ${product?.name}\n`;
     message += `🎨 Design: ${design ? design?.name : 'No custom design'}\n`;
     message += `📊 Quantity: ${quantity}\n`;
@@ -86,7 +86,7 @@ const CustomOrderPage = () => {
     message += `\nPlease confirm the order details and let me know the next steps!`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/917992801158?text=${encodedMessage}`, '_blank');
   };
 
   const handleEditOrder = () => {
@@ -344,7 +344,7 @@ const CustomOrderPage = () => {
                 <Button
                   variant="success"
                   size="sm"
-                  onClick={() => window.open('https://wa.me/919876543210?text=Hi%20Papu%2C%20I%20need%20help%20with%20my%20custom%20order', '_blank')}
+                  onClick={() => window.open('https://wa.me/917992801158?text=Hi%20Satya%2C%20I%20need%20help%20with%20my%20custom%20order', '_blank')}
                   iconName="MessageCircle"
                   iconPosition="left"
                 >
@@ -365,7 +365,7 @@ const CustomOrderPage = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => window.open('tel:+919876543210', '_self')}
+                  onClick={() => window.open('tel:+917992801158', '_self')}
                   iconName="Phone"
                   iconPosition="left"
                 >
@@ -401,7 +401,7 @@ const CustomOrderPage = () => {
           <Button
             variant="success"
             size="lg"
-            onClick={() => window.open('https://wa.me/919876543210?text=Hi%20Papu%2C%20I%20need%20help%20with%20my%20custom%20order', '_blank')}
+            onClick={() => window.open('https://wa.me/917992801158?text=Hi%20Satya%2C%20I%20need%20help%20with%20my%20custom%20order', '_blank')}
             iconName="MessageCircle"
             className="whatsapp-pulse shadow-brand-lg"
           />

@@ -46,7 +46,7 @@ const AboutPreview = () => {
   {
     id: 2,
     title: "Personal Touch",
-    description: "Direct communication with founder Papu for personalized service",
+    description: "Direct communication with founder Satya for personalized service",
     icon: "Heart",
     color: "text-destructive"
   },

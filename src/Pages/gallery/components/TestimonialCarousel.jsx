@@ -14,7 +14,7 @@ const TestimonialCarousel = () => {
       avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1e94201ef-1763296134446.png",
       avatarAlt: "Professional headshot of Indian woman with long black hair wearing white blouse",
       rating: 5,
-      text: `PrintHub Pro transformed our wedding completely! Papu understood our vision perfectly and created custom t-shirts for our entire wedding party. The quality was exceptional and the designs were exactly what we dreamed of. Highly recommend for any special occasion!`,
+      text: `The Print Hub transformed our wedding completely! Satya understood our vision perfectly and created custom t-shirts for our entire wedding party. The quality was exceptional and the designs were exactly what we dreamed of. Highly recommend for any special occasion!`,
       project: "Wedding Party T-Shirts",
       image: "https://images.unsplash.com/photo-1584012961506-b6fc4c9f3105",
       imageAlt: "Group of people wearing matching custom white t-shirts at outdoor wedding celebration"
@@ -26,7 +26,7 @@ const TestimonialCarousel = () => {
       avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_10742e8ef-1763296701959.png",
       avatarAlt: "Professional headshot of Indian man with short black hair in navy blue shirt",
       rating: 5,
-      text: `As a startup founder, I needed branded merchandise that would make an impact. PrintHub Pro delivered beyond expectations! From custom mugs to branded bags, everything was perfect. The attention to detail and quick turnaround helped us launch our brand successfully.`,
+      text: `As a startup founder, I needed branded merchandise that would make an impact. The Print Hub delivered beyond expectations! From custom mugs to branded bags, everything was perfect. The attention to detail and quick turnaround helped us launch our brand successfully.`,
       project: "Startup Branding Package",
       image: "https://images.unsplash.com/photo-1684987642087-f0a9756f282a",
       imageAlt: "Collection of branded merchandise including mugs, bags, and stationery on modern office desk"
@@ -38,7 +38,7 @@ const TestimonialCarousel = () => {
       avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1248a4355-1763295598278.png",
       avatarAlt: "Professional headshot of Indian woman with shoulder-length hair wearing blue blazer",
       rating: 5,
-      text: `I wanted to surprise my husband with a custom photo mug for our anniversary. Papu made the entire process so smooth and the final product was absolutely beautiful! The print quality was amazing and it arrived exactly on time. Will definitely order again!`,
+      text: `I wanted to surprise my husband with a custom photo mug for our anniversary. Satya made the entire process so smooth and the final product was absolutely beautiful! The print quality was amazing and it arrived exactly on time. Will definitely order again!`,
       project: "Anniversary Photo Mug",
       image: "https://images.unsplash.com/photo-1697065686935-2779af5cbddc",
       imageAlt: "White ceramic mug with custom photo print sitting on wooden table with coffee"
@@ -50,7 +50,7 @@ const TestimonialCarousel = () => {
       avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1221b5557-1763292864149.png",
       avatarAlt: "Professional headshot of Indian man with beard wearing white shirt and glasses",
       rating: 5,
-      text: `Our cricket team needed custom jerseys for the tournament. PrintHub Pro not only delivered high-quality jerseys but also helped us with the design. The team looked professional and the jerseys were comfortable to play in. Excellent service from start to finish!`,
+      text: `Our cricket team needed custom jerseys for the tournament. The Print Hub not only delivered high-quality jerseys but also helped us with the design. The team looked professional and the jerseys were comfortable to play in. Excellent service from start to finish!`,
       project: "Cricket Team Jerseys",
       image: "https://images.unsplash.com/photo-1647332208410-4da856229cd4",
       imageAlt: "Cricket team wearing matching custom blue jerseys posing together on cricket field"

@@ -10,17 +10,17 @@ import SocialConnect from './components/SocialConnect';
 
 const ContactPage = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi Papu, I'm interested in custom printing services. Can you help me get started?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya, I'm interested in custom printing services. Can you help me get started?");
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact Us - PrintHub Pro | Custom Printing Services in Bhubaneswar</title>
-        <meta name="description" content="Get in touch with PrintHub Pro for custom printing services. WhatsApp support, email, phone, and studio visits available. Fast response times and personalized service." />
+        <title>Contact Us - The Print Hub | Custom Printing Services in Bhubaneswar</title>
+        <meta name="description" content="Get in touch with The Print Hub for custom printing services. WhatsApp support, email, phone, and studio visits available. Fast response times and personalized service." />
         <meta name="keywords" content="contact PrintHub Pro, custom printing Bhubaneswar, WhatsApp printing service, printing consultation, studio visit" />
-        <meta property="og:title" content="Contact PrintHub Pro - Your Custom Printing Partner" />
+        <meta property="og:title" content="Contact The Print Hub - Your Custom Printing Partner" />
         <meta property="og:description" content="Multiple ways to connect with PrintHub Pro. WhatsApp for instant support, email for detailed inquiries, or visit our Bhubaneswar studio." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://printhubpro.com/contact" />
@@ -94,7 +94,7 @@ const ContactPage = () => {
               </p>
               <div className="flex space-x-4">
                 <button 
-                  onClick={() => window.open('https://instagram.com/printhubpro', '_blank')}
+                  onClick={() => window.open('http://instagram.com/the_printhub.in', '_blank')}
                   className="text-background/70 hover:text-brand-energy transition-colors duration-200"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

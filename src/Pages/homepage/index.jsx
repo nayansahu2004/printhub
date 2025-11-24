@@ -22,14 +22,14 @@ const Homepage = () => {
         <title>The PrintHub | Your Vision Our Craft</title>
         <meta 
           name="description" 
-          content="Transform your ideas into beautiful reality with PrintHub Pro. Expert custom printing services for t-shirts, mugs, phone cases, business cards & more. Founded by Papu in September 2024. Get instant quotes via WhatsApp!" 
+          content="Transform your ideas into beautiful reality with PrintHub Pro. Expert custom printing services for t-shirts, mugs, phone cases, business cards & more. Founded by Satya in September 2024. Get instant quotes via WhatsApp!" 
         />
         <meta 
           name="keywords" 
-          content="custom printing, t-shirt printing, mug printing, phone case printing, business cards, banners, personalized gifts, sublimation printing, PrintHub Pro, Papu, custom design" 
+          content="custom printing, t-shirt printing, mug printing, phone case printing, business cards, banners, personalized gifts, sublimation printing, PrintHub Pro, Satya, custom design" 
         />
-        <meta name="author" content="PrintHub Pro - Satya Prakash Subudhi (Papu)" />
-        <meta property="og:title" content="PrintHub Pro - Your Vision, Our Craft" />
+        <meta name="author" content="The Print Hub - Satya Prakash Subudhi (Satya)" />
+        <meta property="og:title" content="The Print Hub - Your Vision, Our Craft" />
         <meta 
           property="og:description" 
           content="Expert custom printing services for all your personalization needs. Quality guaranteed, fast turnaround, 24/7 WhatsApp support." 

@@ -83,7 +83,7 @@ const FeaturedWork = () => {
     : featuredProjects?.filter((project) => project?.category === activeCategory);
 
   const handleWhatsAppInquiry = (projectTitle) => {
-    const message = encodeURIComponent(`Hi Papu! I saw the "${projectTitle}" project on your website. I'd like to discuss a similar custom printing project. Can you help?`);
+    const message = encodeURIComponent(`Hi Satya! I saw the "${projectTitle}" project on your website. I'd like to discuss a similar custom printing project. Can you help?`);
     window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 

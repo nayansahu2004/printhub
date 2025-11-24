@@ -7,8 +7,8 @@ const GalleryCard = ({ item, viewMode, onShare, onViewDetails }) => {
   const [isLiked, setIsLiked] = useState(false);
 
   const handleWhatsAppInquiry = () => {
-    const message = encodeURIComponent(`Hi Papu! I saw this amazing ${item?.title} in your gallery and I'm interested in creating something similar. Can you help me with a custom design?`);
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent(`Hi Satya! I saw this amazing ${item?.title} in your gallery and I'm interested in creating something similar. Can you help me with a custom design?`);
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   const handleShare = () => {

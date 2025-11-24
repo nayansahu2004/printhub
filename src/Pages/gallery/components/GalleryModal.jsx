@@ -21,8 +21,8 @@ const GalleryModal = ({ item, isOpen, onClose }) => {
   };
 
   const handleWhatsAppInquiry = () => {
-    const message = encodeURIComponent(`Hi Papu! I'm interested in creating a custom ${item?.category} similar to "${item?.title}". Can you provide a quote and timeline?`);
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent(`Hi Satya! I'm interested in creating a custom ${item?.category} similar to "${item?.title}". Can you provide a quote and timeline?`);
+    window.open(`https://wa.me/917992801158?text=${message}`, '_blank');
   };
 
   const handleShare = () => {

@@ -123,8 +123,8 @@ const Gallery = () => {
   };
 
   const handleWhatsAppContact = () => {
-    const message = encodeURIComponent("Hi Papu! I browsed through your gallery and I'm impressed with your work. I'd like to discuss a custom printing project. Can you help me?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Satya! I browsed through your gallery and I'm impressed with your work. I'd like to discuss a custom printing project. Can you help me?");
+    window.open(`https://wa.me/917992801158?text=${"Hello Satya! I have an order for you, can you communicate for better results."}`, '_blank');
   };
 
   useEffect(() => {
@@ -136,7 +136,7 @@ const Gallery = () => {
       <Helmet>
         <title>Gallery - The PrintHub | Custom Printing Portfolio & Customer Success Stories</title>
         <meta name="description" content="Explore our gallery of custom printing projects including apparel, mugs, bags, home decor, and business materials. See real customer success stories and transformations." />
-        <meta name="keywords" content="custom printing gallery, customer success stories, custom apparel, personalized mugs, branded merchandise, PrintHub Pro portfolio" />
+        <meta name="keywords" content="custom printing gallery, customer success stories, custom apparel, personalized mugs, branded merchandise, The Print Hub portfolio" />
       </Helmet>
       <Header />
       <main className="pt-20">
@@ -324,7 +324,7 @@ const Gallery = () => {
         size="lg"
         iconName="Phone"
         iconPosition="left"
-        onClick={() => window.open('tel:+919876543210', '_self')}
+        onClick={() => window.open('tel:+917992801158', '_self')}
         className="border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
       >
         Call Us Today
@@ -352,7 +352,7 @@ const Gallery = () => {
           iconName="MessageCircle"
           onClick={handleWhatsAppContact}
           className="whatsapp-pulse shadow-brand-lg">
-          <span className="hidden sm:inline ml-2">Chat with Papu</span>
+          <span className="hidden sm:inline ml-2">Chat with Satya</span>
         </Button>
       </div>
     </div>

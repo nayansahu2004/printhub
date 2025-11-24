@@ -8,10 +8,10 @@ const SocialConnect = ({ onWhatsAppClick }) => {
       id: 1,
       name: "Instagram",
       icon: "Instagram",
-      handle: "@printhubpro",
+      handle: "@theprinthub",
       description: "Daily showcases of our latest custom creations",
       followers: "2.5K+ followers",
-      url: "https://instagram.com/printhubpro",
+      url: "http://instagram.com/the_printhub.in",
       color: "bg-gradient-to-br from-purple-500 to-pink-500",
       textColor: "text-white"
     },
@@ -22,7 +22,7 @@ const SocialConnect = ({ onWhatsAppClick }) => {
       handle: "PrintHub Pro",
       description: "Customer reviews and behind-the-scenes content",
       followers: "1.8K+ likes",
-      url: "https://facebook.com/printhubpro",
+      url: "https://facebook.com",
       color: "bg-blue-600",
       textColor: "text-white"
     },
@@ -45,7 +45,7 @@ const SocialConnect = ({ onWhatsAppClick }) => {
       handle: "PrintHub Pro",
       description: "Printing tutorials and customer testimonials",
       followers: "850+ subscribers",
-      url: "https://youtube.com/@printhubpro",
+      url: "https://youtube.com",
       color: "bg-red-600",
       textColor: "text-white"
     }
@@ -185,7 +185,7 @@ const SocialConnect = ({ onWhatsAppClick }) => {
                 variant="outline"
                 iconName="ExternalLink"
                 iconPosition="right"
-                onClick={() => window.open('https://instagram.com/printhubpro', '_blank')}
+                onClick={() => window.open('http://instagram.com/the_printhub.in', '_blank')}
               >
                 View All Posts
               </Button>

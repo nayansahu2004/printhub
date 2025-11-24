@@ -113,7 +113,7 @@ const FAQ = ({ onWhatsAppClick }) => {
                     variant="outline"
                     iconName="Mail"
                     iconPosition="left"
-                    onClick={() => window.open('mailto:hello@printhubpro.com?subject=Question about Custom Printing', '_self')}
+                    onClick={() => window.open('mailto:theprinthub.in@gmail.com?subject=Question about Custom Printing', '_self')}
                   >
                     Send Email
                   </Button>

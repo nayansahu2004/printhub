@@ -6,8 +6,8 @@ const FounderStory = () => {
   const milestones = [
   {
     date: "September 2024",
-    title: "PrintHub Pro Founded",
-    description: "Satya Prakash Subudhi established PrintHub Pro with a vision to transform everyday items into meaningful, personalized treasures.",
+    title: "The Print HubFounded",
+    description: "Satya Prakash Subudhi established The Print Hub with a vision to transform everyday items into meaningful, personalized treasures.",
     icon: "Rocket"
   },
   {
@@ -41,14 +41,14 @@ const FounderStory = () => {
                 From Vision to Reality
               </h2>
               <p className="text-brand-body text-muted-foreground">
-                The story of The PrintHub began with a simple observation: in a world of mass production, people crave something uniquely theirs. Satya Prakash Subudhi, fondly known as Papu, recognized this need and decided to bridge the gap between imagination and reality.
+                The story of The PrintHub began with a simple observation: in a world of mass production, people crave something uniquely theirs. Satya Prakash Subudhi, fondly known as Satya, recognized this need and decided to bridge the gap between imagination and reality.
               </p>
             </div>
 
             <div className="space-brand-md">
               <h3 className="text-brand-subtitle text-foreground mb-4">The Journey Begins</h3>
               <p className="text-brand-body text-muted-foreground mb-4">
-                With a background in design and a passion for craftsmanship, Papu started PrintHub Pro in September 2024. What began as a small venture has quickly grown into a trusted name in custom printing and sublimation services.
+                With a background in design and a passion for craftsmanship, Satya started The Print Hub in September 2024. What began as a small venture has quickly grown into a trusted name in custom printing and sublimation services.
               </p>
               <p className="text-brand-body text-muted-foreground">
                 Our approach is simple yet powerful: we listen to your vision, understand your needs, and use our expertise to create something extraordinary. Every project is a collaboration between your creativity and our craftsmanship.

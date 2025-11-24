@@ -14,15 +14,15 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const handleWhatsAppClick = (serviceName = '', price = '') => {
-    let message = "Hi Papu! I'm interested in your custom printing services.";
+    let message = "Hi Satya! I'm interested in your custom printing services.";
     
     if (serviceName && price) {
-      message = `Hi Papu! I'm interested in ${serviceName}. I saw the pricing starts from ₹${price}. Can you help me with more details?`;
+      message = `Hi Satya! I'm interested in ${serviceName}. I saw the pricing starts from ₹${price}. Can you help me with more details?`;
     } else if (serviceName) {
-      message = `Hi Papu! I'm interested in ${serviceName}. Can you provide more information and pricing?`;
+      message = `Hi Satya! I'm interested in ${serviceName}. Can you provide more information and pricing?`;
     }
     
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+917992801158?text=${encodeURIComponent("Hello Satya! I have an order for you, can we chat from here on.")}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -50,7 +50,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Printing Services - PrintHub Pro | T-Shirts, Mugs, Keychains & More</title>
+        <title>Custom Printing Services - The Print Hub | T-Shirts, Mugs, Keychains & More</title>
         <meta 
           name="description" 
           content="Discover PrintHub Pro's comprehensive custom printing services. From personalized t-shirts and mugs to promotional items and business cards. Quality guaranteed, fast delivery, competitive pricing." 
