@@ -15,7 +15,7 @@ const GalleryCard = ({ item, viewMode, onShare, onViewDetails }) => {
     if (navigator.share) {
       navigator.share({
         title: item?.title,
-        text: `Check out this amazing custom ${item?.category} by PrintHub Pro!`,
+        text: `Check out this amazing custom ${item?.category} by The PrintHub!`,
         url: window.location?.href
       });
     } else {

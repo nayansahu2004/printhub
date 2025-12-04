@@ -21,7 +21,7 @@ const About = () => {
           name="description" 
           content="Meet Satya Prakash Subudhi, founder of The PrintHub. Learn about our journey since September 2024, craftsmanship philosophy, and commitment to transforming your vision into reality through expert custom printing services." 
         />
-        <meta name="keywords" content="The PrintHub founder, Satya printing services, custom printing story, about PrintHub Pro, printing craftsmanship, personalized products India" />
+        <meta name="keywords" content="The PrintHub founder, Satya printing services, custom printing story, about The PrintHub, printing craftsmanship, personalized products India" />
         <meta property="og:title" content="About The PrintHub - Your Vision, Our Craft" />
         <meta property="og:description" content="Discover the story behind The PrintHub and meet the passionate team bringing your creative visions to life since September 2024." />
         <meta property="og:type" content="website" />

@@ -124,7 +124,7 @@ const CustomOrderPage = () => {
     <>
       <Helmet>
         <title>Custom Order - The PrintHub | Your Vision, Our Craft</title>
-        <meta name="description" content="Place your custom printing order with PrintHub Pro. Easy ordering process with real-time WhatsApp support, design upload, and instant quotes." />
+        <meta name="description" content="Place your custom printing order with The PrintHub. Easy ordering process with real-time WhatsApp support, design upload, and instant quotes." />
         <meta name="keywords" content="custom order, printing services, t-shirt printing, mug printing, personalized gifts, custom design" />
       </Helmet>
       <div className="min-h-screen bg-canvas">
@@ -412,7 +412,7 @@ const CustomOrderPage = () => {
           <div className="container-brand">
             <div className="text-center">
               <p className="font-body">
-                © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Your Vision, Our Craft
+                © {new Date()?.getFullYear()} The PrintHub. All rights reserved. | Your Vision, Our Craft
               </p>
             </div>
           </div>

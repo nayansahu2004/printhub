@@ -90,7 +90,7 @@ const CustomerTestimonials = () => {
           </h2>
 
           <p className="text-base text-white/85 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers have to say about their experience with PrintHub Pro.
+            Don't just take our word for it. Here's what our satisfied customers have to say about their experience with The PrintHub.
           </p>
         </div>
 

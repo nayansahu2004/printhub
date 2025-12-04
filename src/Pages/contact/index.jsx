@@ -19,9 +19,9 @@ const ContactPage = () => {
       <Helmet>
         <title>Contact Us - The Print Hub | Custom Printing Services in Bhubaneswar</title>
         <meta name="description" content="Get in touch with The Print Hub for custom printing services. WhatsApp support, email, phone, and studio visits available. Fast response times and personalized service." />
-        <meta name="keywords" content="contact PrintHub Pro, custom printing Bhubaneswar, WhatsApp printing service, printing consultation, studio visit" />
+        <meta name="keywords" content="contact The PrintHub, custom printing Bhubaneswar, WhatsApp printing service, printing consultation, studio visit" />
         <meta property="og:title" content="Contact The Print Hub - Your Custom Printing Partner" />
-        <meta property="og:description" content="Multiple ways to connect with PrintHub Pro. WhatsApp for instant support, email for detailed inquiries, or visit our Bhubaneswar studio." />
+        <meta property="og:description" content="Multiple ways to connect with The PrintHub. WhatsApp for instant support, email for detailed inquiries, or visit our Bhubaneswar studio." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://printhubpro.com/contact" />
       </Helmet>
@@ -84,7 +84,7 @@ const ContactPage = () => {
                   />
                 </svg>
                 <div>
-                  <h3 className="text-xl font-brand font-bold text-brand-energy">PrintHub Pro</h3>
+                  <h3 className="text-xl font-brand font-bold text-brand-energy">The PrintHub</h3>
                   <p className="text-sm text-background/80">Your Vision, Our Craft</p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ const ContactPage = () => {
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
             <p className="text-background/60 text-sm">
-              © {new Date()?.getFullYear()} PrintHub Pro. All rights reserved. | Crafted with ❤️ by Satya Prakash Subudhi
+              © {new Date()?.getFullYear()} The PrintHub. All rights reserved. | Crafted with ❤️ by Satya Prakash Subudhi
             </p>
           </div>
         </div>

@@ -53,13 +53,13 @@ const Services = () => {
         <title>Custom Printing Services - The Print Hub | T-Shirts, Mugs, Keychains & More</title>
         <meta 
           name="description" 
-          content="Discover PrintHub Pro's comprehensive custom printing services. From personalized t-shirts and mugs to promotional items and business cards. Quality guaranteed, fast delivery, competitive pricing." 
+          content="Discover The PrintHub's comprehensive custom printing services. From personalized t-shirts and mugs to promotional items and business cards. Quality guaranteed, fast delivery, competitive pricing." 
         />
         <meta 
           name="keywords" 
           content="custom printing, t-shirt printing, personalized mugs, custom keychains, promotional items, business cards, phone cases, banners, bulk printing, custom merchandise" 
         />
-        <meta property="og:title" content="Custom Printing Services - PrintHub Pro" />
+        <meta property="og:title" content="Custom Printing Services - The PrintHub" />
         <meta 
           property="og:description" 
           content="Transform your vision into reality with our premium custom printing services. Quality craftsmanship, competitive pricing, and fast delivery guaranteed." 

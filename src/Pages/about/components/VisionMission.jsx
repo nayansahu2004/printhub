@@ -99,7 +99,7 @@ const VisionMission = () => {
             <div className="bg-gradient-brand rounded-2xl p-8 lg:p-12 text-[#081426]">
               <h2 className="text-2xl lg:text-3xl font-bold mb-6">Our Commitment to You</h2>
               <p className="text-lg mb-8 opacity-90">
-                At PrintHub Pro, we're not just creating products—we're crafting experiences, building relationships, and helping you tell your story. Every project is a promise kept, every delivery is trust earned.
+                At The PrintHub, we're not just creating products—we're crafting experiences, building relationships, and helping you tell your story. Every project is a promise kept, every delivery is trust earned.
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>

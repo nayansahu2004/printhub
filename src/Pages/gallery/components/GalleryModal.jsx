@@ -29,7 +29,7 @@ const GalleryModal = ({ item, isOpen, onClose }) => {
     if (navigator.share) {
       navigator.share({
         title: item?.title,
-        text: `Check out this amazing ${item?.category} by PrintHub Pro!`,
+        text: `Check out this amazing ${item?.category} by The PrintHub!`,
         url: window.location?.href
       });
     }

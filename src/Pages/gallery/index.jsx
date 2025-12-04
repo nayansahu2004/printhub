@@ -118,7 +118,7 @@ const Gallery = () => {
   const handleShare = (item) => {
     // Fallback share functionality
     if (navigator.clipboard) {
-      navigator.clipboard?.writeText(`Check out this amazing ${item?.category} by PrintHub Pro: ${item?.title}`);
+      navigator.clipboard?.writeText(`Check out this amazing ${item?.category} by The PrintHub: ${item?.title}`);
     }
   };
 
@@ -303,7 +303,7 @@ const Gallery = () => {
     </h2>
 
     <p className="text-base text-white/85 max-w-2xl mx-auto mb-8">
-      Join hundreds of satisfied customers who have brought their vision to life with PrintHub Pro. 
+      Join hundreds of satisfied customers who have brought their vision to life with The PrintHub. 
       Let's create something amazing together!
     </p>
 

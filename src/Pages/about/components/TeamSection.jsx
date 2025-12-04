@@ -10,7 +10,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
     name: "Satya Prakash Subudhi (Satya)",
     role: "Founder & Creative Director",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f55ffadb-1763299556335.png",
-    imageAlt: "Satya Prakash Subudhi (Satya), founder of PrintHub Pro, professional headshot with confident smile wearing casual business attire",
+    imageAlt: "Satya Prakash Subudhi (Satya), founder of The PrintHub, professional headshot with confident smile wearing casual business attire",
     bio: "With a passion for design and years of experience in printing technology, Satya founded The Print Hub to bridge the gap between creativity and craftsmanship. His vision drives every project we undertake.",
     expertise: ["Sublimation Printing", "Design Consultation", "Quality Control", "Customer Relations"],
     social: {
@@ -23,7 +23,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
     name: "Priya Sharma",
     role: "Design Specialist",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_186617a2d-1763301883946.png",
-    imageAlt: "Priya Sharma, design specialist at PrintHub Pro, professional woman with long dark hair smiling at camera in creative workspace",
+    imageAlt: "Priya Sharma, design specialist at The PrintHub, professional woman with long dark hair smiling at camera in creative workspace",
     bio: "Priya brings artistic flair and technical expertise to every design project. Her attention to detail ensures that your vision is translated perfectly into the final product.",
     expertise: ["Graphic Design", "Color Matching", "Print Layout", "Creative Consultation"],
     social: {
@@ -35,7 +35,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
     name: "Rahul Kumar",
     role: "Production Manager",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_175ea645a-1763293958593.png",
-    imageAlt: "Rahul Kumar, production manager at PrintHub Pro, professional man with short black hair in blue shirt standing near printing equipment",
+    imageAlt: "Rahul Kumar, production manager at The PrintHub, professional man with short black hair in blue shirt standing near printing equipment",
     bio: "Rahul oversees our production process, ensuring every item meets our high-quality standards. His technical knowledge and process optimization keep us running smoothly.",
     expertise: ["Production Planning", "Quality Assurance", "Equipment Maintenance", "Process Optimization"],
     social: {
@@ -141,7 +141,7 @@ const TeamSection = ({ onWhatsAppClick }) => {
         {/* Achievements */}
         <div className="bg-muted/30 rounded-2xl p-8 lg:p-12">
           <div className="text-center mb-8">
-            <h2 className="text-brand-title text-foreground mb-4">Why Choose PrintHub Pro?</h2>
+            <h2 className="text-brand-title text-foreground mb-4">Why Choose The PrintHub?</h2>
             <p className="text-brand-body text-muted-foreground max-w-2xl mx-auto">
               Our achievements speak for themselves, but it's our commitment to your satisfaction that truly sets us apart.
             </p>
