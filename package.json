@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "PrintHub Pro - custom printing & sublimation services",
+  "description": "The PrintHub - custom printing & sublimation services",
   "main": "index.js",
   "scripts": {
     "start": "vite",
