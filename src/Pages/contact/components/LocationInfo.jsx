@@ -124,7 +124,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                   loading="lazy"
                   title="The Print Hub Studio Location in Bhubaneswar"
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=20.2961,85.8245&z=14&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.4899045458606!2d85.7865758!3d20.2430589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a70a4047b51f%3A0x477749f64e028518!2sThe%20PrintHub!5e1!3m2!1sen!2sin!4v1765075052123!5m2!1sen!2sin"
                   className="border-0"
                 ></iframe>
               </div>
@@ -140,7 +140,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                     size="sm"
                     iconName="ExternalLink"
                     iconPosition="right"
-                    onClick={() => window.open('https://maps.google.com/?q=20.2961,85.8245', '_blank')}
+                    onClick={() => window.open('https://maps.app.goo.gl/DfzPn6kqcbCymWWu7', '_blank')}
                   >
                     Open in Maps
                   </Button>
