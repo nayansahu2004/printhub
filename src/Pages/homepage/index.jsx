@@ -35,8 +35,7 @@ const Homepage = () => {
           content="Expert custom printing services for all your personalization needs. Quality guaranteed, fast turnaround, 24/7 WhatsApp support." 
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://printhubpro.com" />
-        <link rel="canonical" href="https://printhubpro.com" />
+        
       </Helmet>
       <div className="min-h-screen bg-background">
         {/* Header */}
