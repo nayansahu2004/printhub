@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import Button from "../../../components/ui/Button";
 import Icon from "../../../components/AppIcon";
 import Image from "../../../components/AppImage";
+import Hoodie_Image from "../../../assets/Homepage_Hoodie.jpg"
+import Mug_Image from "../../../assets/Homepage_Mug.jpg"
+import Shirt_Image from "../../../assets/Homepage_Shirt.jpg"
+import Bag_Image from "../../../assets/Homepage_Tote.jpg"
 
 const HeroSection = () => {
   return (
@@ -75,30 +79,28 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-              <div className="absolute inset-0 z-0 hidden sm:block">
-                <Image
-                  src="https://images.unsplash.com/photo-1715787940712-aa4ced280e37?v=1&q=80&w=1600&auto=format&fit=crop"
-                  alt="Custom printed black hoodie with white logo"
-                  className="w-full h-full object-cover opacity-0 scale-[1.05] transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-40" />
-              </div>
+            <div className="h-28 overflow-hidden">
+              <Image
+                src={Hoodie_Image}
+                alt="Custom printed black hoodie with white logo"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-              <div className="relative z-10 p-6">
+              <div className="relative z-10 p-4">
                 <h3 className="font-poppins font-semibold text-lg text-white">Custom Hoodies</h3>
                 <p className="text-sm opacity-80 text-white/90">Premium Fabric | Long-lasting Print</p>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-              <div className="absolute inset-0 z-0 hidden sm:block">
-                <Image
-                  src="./totebags.jpg "
-                  alt="Colorful printed product sample"
-                  className="w-full h-full object-cover opacity-0 scale-[1.05] transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-40" />
-              </div>
+            <div className="h-28 overflow-hidden">
+              <Image
+                src={Bag_Image}
+                alt="Custom printed black hoodie with white logo"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
               <div className="relative z-10 p-6">
                 <h3 className="font-poppins font-semibold text-lg text-white">Tote Bags</h3>
@@ -109,14 +111,13 @@ const HeroSection = () => {
 
           <div className="space-y-6 pt-10">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-              <div className="absolute inset-0 z-0 hidden sm:block">
-                <Image
-                  src="https://images.unsplash.com/photo-1529155784585-a840631d643b?v=1&q=80&w=1600&auto=format&fit=crop"
-                  alt="Custom mug sample"
-                  className="w-full h-full object-cover opacity-0 scale-[1.05] transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-40" />
-              </div>
+            <div className="h-28 overflow-hidden">
+              <Image
+                src={Mug_Image}
+                alt="Custom printed black hoodie with white logo"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
               <div className="relative z-10 p-6">
                 <h3 className="font-poppins font-semibold text-lg text-white">Mugs & Gifts</h3>
@@ -125,16 +126,15 @@ const HeroSection = () => {
             </div>
 
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-              <div className="absolute inset-0 z-0 hidden sm:block">
-                <Image
-                  src="https://images.unsplash.com/photo-1599637132648-1f78cee9b7d7?v=1&q=80&w=1600&auto=format&fit=crop"
-                  alt="Custom t-shirt sample"
-                  className="w-full h-full object-cover opacity-0 scale-[1.05] transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-100"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-40" />
-              </div>
+            <div className="h-28 overflow-hidden">
+              <Image
+                src={Shirt_Image}
+                alt="Custom printed black hoodie with white logo"
+                className="w-full h-60 object-cover  transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-              <div className="relative z-10 p-6">
+              <div className="relative z-10 p-4">
                 <h3 className="font-poppins font-semibold text-lg text-white">Custom T-Shirts</h3>
                 <p className="text-sm opacity-80 text-white/90">All Sizes Available</p>
               </div>
