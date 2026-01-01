@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
+import Shirt from "../../../assets/Custom_Shirt.png"
+import Cushion from "../../../assets/Custom_Cushion.png"
+import Apron from "../../../assets/Custom_Apron.png"
+import Hoodie from "../../../assets/Custom_Hoodie.png"
+import Bag from "../../../assets/Custom_Bag.png"
+import Sublimation from "../../../assets/Custom_Sublimation.png"
+import Key from "../../../assets/Custom_Key.png"
+import Curtain from "../../../assets/Custom_Curtain.png"
+import Mugs from "../../../assets/Custom_Mugs.png"
+import Sipper from "../../../assets/Custom_Sipper.png"
+import Tote from "../../../assets/Custom_Tote.png"
+import Crystal from "../../../assets/Custom_Crystal.png"
+
 
 const ServicesPreview = () => {
   const services = [
@@ -10,7 +23,7 @@ const ServicesPreview = () => {
       id: 1,
       name: "Custom T-Shirts",
       description: "Premium quality cotton tees with vibrant, long-lasting prints",
-      image: "https://images.unsplash.com/photo-1599637132648-1f78cee9b7d7",
+      image: Shirt,
       alt: "Custom printed white t-shirt with colorful geometric design displayed on wooden background",
       icon: "Shirt",
       features: ["All Sizes", "Premium Cotton", "Vibrant Colors"],
@@ -18,49 +31,115 @@ const ServicesPreview = () => {
     },
     {
       id: 2,
-      name: "Custom Mugs",
-      description: "Ceramic mugs perfect for gifts, offices, and personal use",
-      image: "https://images.unsplash.com/photo-1602265303802-e77eb64d0e2b",
-      alt: "White ceramic mug with custom mandala design in blue and orange colors on neutral background",
-      icon: "Coffee",
-      features: ["Dishwasher Safe", "11oz & 15oz", "Photo Quality"]
-    },
+      name: "Custom Cushions",
+      description: "Soft cushions with personalized prints for home and gifting",
+      image: Cushion,
+      alt: "Decorative cushions on modern sofa",
+      icon: "Sofa",
+      features: ["Soft Fabric", "Fade Resistant", "Custom Designs"]
+    }
+    ,
+    
+    // {
+    //   id: 2,
+    //   name: "Custom Mugs",
+    //   description: "Ceramic mugs perfect for gifts, offices, and personal use",
+    //   image: "https://images.unsplash.com/photo-1602265303802-e77eb64d0e2b",
+    //   alt: "White ceramic mug with custom mandala design in blue and orange colors on neutral background",
+    //   icon: "Coffee",
+    //   features: ["Dishwasher Safe", "11oz & 15oz", "Photo Quality"]
+    // },
     {
       id: 3,
-      name: "Phone Cases",
-      description: "Protective cases with stunning custom designs for all devices",
-      image: "https://images.unsplash.com/photo-1678930427302-381e63fbe826",
-      alt: "Collection of colorful custom printed phone cases with various artistic patterns arranged in grid",
-      icon: "Smartphone",
-      features: ["All Models", "Drop Protection", "Scratch Resistant"]
-    },
+      name: "Custom Aprons",
+      description: "Durable printed aprons for kitchens, cafes, and events",
+      image: Apron,
+      alt: "Person wearing apron while cooking",
+      icon: "UtensilsCrossed",
+      features: ["Durable Fabric", "Wash Safe", "Perfect Fit"]
+    }
+    ,
     {
       id: 4,
       name: "Custom Hoodies",
       description: "Cozy hoodies with personalized prints for style and comfort",
-      image: "https://images.unsplash.com/photo-1715787940712-aa4ced280e37",
+      image: Hoodie,
       alt: "Black hoodie with white custom logo print displayed on mannequin in modern studio setting",
       icon: "Zap",
       features: ["Unisex Fit", "Soft Fabric", "Durable Print"]
     },
     {
+      id: 4,
+      name: "School Bags & Stationery",
+      description: "Customized school essentials for students and institutions",
+      image: Bag,
+      alt: "School backpack with stationery",
+      icon: "Backpack",
+      features: ["Student Friendly", "Bulk Orders", "Custom Branding"]
+    },    
+    {
       id: 5,
-      name: "Business Cards",
-      description: "Professional business cards that make lasting impressions",
-      image: "https://images.unsplash.com/photo-1605079827729-17cc199e4b15",
-      alt: "Stack of elegant business cards with modern design and gold foil accents on dark surface",
-      icon: "CreditCard",
-      features: ["Premium Paper", "Multiple Finishes", "Quick Delivery"]
+      name: "Sublimation T-Shirts",
+      description: "Photo-quality sublimation prints with vibrant color accuracy",
+      image: Sublimation,
+      alt: "Graphic printed sublimation t-shirt",
+      icon: "Palette",
+      features: ["Photo Prints", "No Peeling", "Breathable Fabric"]
     },
     {
       id: 6,
-      name: "Banners & Posters",
-      description: "Eye-catching banners and posters for events and promotions",
-      image: "https://images.unsplash.com/photo-1707413377467-30d039f36092",
-      alt: "Large format colorful promotional banner being installed outdoors with vibrant graphics and text",
-      icon: "Flag",
-      features: ["Weather Resistant", "Large Format", "HD Quality"]
-    }
+      name: "Sublimation Key Chains",
+      description: "Compact personalized keychains for gifting and branding",
+      image: Key,
+      alt: "Keychain on wooden surface",
+      icon: "KeyRound",
+      features: ["Lightweight", "Sharp Prints", "Great for Gifting"]
+    },
+    {
+      id: 7,
+      name: "Printed Bedsheets & Curtains",
+      description: "Elegant printed fabrics to elevate home interiors",
+      image: Curtain,
+      alt: "Bedroom with printed bedsheets and curtains",
+      icon: "BedDouble",
+      features: ["Soft Fabric", "Color Fastness", "Custom Patterns"]
+    },
+    {
+      id: 8,
+      name: "Sublimation Mugs",
+      description: "High-quality mugs with photo-realistic sublimation prints",
+      image: Mugs,
+      alt: "Coffee mug on table",
+      icon: "Coffee",
+      features: ["Photo Quality", "Heat Resistant", "Long Lasting"]
+    },
+    {
+      id: 9,
+      name: "Custom Sippers",
+      description: "Reusable sippers with personalized branding",
+      image: Sipper,
+      alt: "Reusable water bottle",
+      icon: "Bottle",
+      features: ["Leak Proof", "Reusable", "Custom Prints"]
+    },
+    {
+      id: 10,
+      name: "Tote bags",
+      description: "Reliable marking solutions for daily use",
+      image: Tote,
+      alt: "Customized printed tote bags for every use",
+      icon: "Tag",
+      features: ["Good quality print", "Good Material", "Bulk Supply"]
+    },    
+    {
+      id: 11,
+      name: "Crystal Frames",
+      description: "Premium crystal frames with laser-sharp photo engraving",
+      image: Crystal,
+      alt: "Glass photo frame on desk",
+      icon: "Image",
+      features: ["Premium Finish", "Gift Ready", "Long Lasting"]
+    }    
   ];
 
   const handleWhatsAppInquiry = (serviceName) => {
@@ -111,7 +190,7 @@ const ServicesPreview = () => {
                   )}
 
                   {/* Image */}
-                  <div className="relative overflow-hidden h-48 bg-gray-100">
+                  <div className="relative overflow-hidden h-88 bg-gray-100">
                     <Image
                       src={`${service.image}?q=80&w=1400&auto=format&fit=crop`}
                       alt={service.alt}

@@ -34,7 +34,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                     <div className="flex items-start space-x-3">
                       <Icon name="Building" size={18} className="text-muted-foreground mt-1" />
                       <div>
-                        <div className="font-medium text-foreground">The Print Hub Studio</div>
+                        <div className="font-medium text-foreground">The Print Hub</div>
                         <div className="text-muted-foreground">Professional Printing & Customization Center</div>
                       </div>
                     </div>
@@ -43,7 +43,7 @@ const LocationInfo = ({ onWhatsAppClick }) => {
                       <Icon name="MapPin" size={18} className="text-muted-foreground mt-1" />
                       <div>
                         <div className="font-medium text-foreground">Bhubaneswar, Odisha</div>
-                        <div className="text-muted-foreground">Near Kalinga Institute of Technology</div>
+                        <div className="text-muted-foreground">Dumduma HB Colony, Phase-1, Plot No: L/32</div>
                       </div>
                     </div>
 

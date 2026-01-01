@@ -50,7 +50,7 @@ const Homepage = () => {
           <ServicesPreview />
 
           {/* Featured Work Gallery */}
-          <FeaturedWork />
+          
 
           {/* About Preview */}
           <AboutPreview />
@@ -77,7 +77,7 @@ const Homepage = () => {
                     <img
                       src="../Logo.png"
                       alt="PrintHub Logo"
-                      className="h-14 object-contain transition-transform duration-300 group-hover:scale-150"
+                      className="h-14 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </Link>
                 </div>

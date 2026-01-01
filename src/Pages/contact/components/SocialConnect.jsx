@@ -38,17 +38,17 @@ const SocialConnect = ({ onWhatsAppClick }) => {
       textColor: "text-whatsapp-foreground",
       isPrimary: true
     },
-    {
-      id: 4,
-      name: "YouTube",
-      icon: "Youtube",
-      handle: "The PrintHub",
-      description: "Printing tutorials and customer testimonials",
-      followers: "850+ subscribers",
-      url: "https://youtube.com",
-      color: "bg-red-600",
-      textColor: "text-white"
-    }
+    // {
+    //   id: 4,
+    //   name: "YouTube",
+    //   icon: "Youtube",
+    //   handle: "The PrintHub",
+    //   description: "Printing tutorials and customer testimonials",
+    //   followers: "850+ subscribers",
+    //   url: "https://youtube.com",
+    //   color: "bg-red-600",
+    //   textColor: "text-white"
+    // }
   ];
 
   const handleSocialClick = (platform) => {
@@ -72,13 +72,13 @@ const SocialConnect = ({ onWhatsAppClick }) => {
           </div>
 
           {/* Social Platforms Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3   gap-6 mb-12">
             {socialPlatforms?.map((platform) => (
               <div
                 key={platform?.id}
                 className={`card-brand group hover:scale-105 transition-all duration-300 cursor-pointer ${
                   platform?.isPrimary ? 'ring-2 ring-whatsapp shadow-brand-lg' : ''
-                }`}
+                }`} 
                 onClick={() => handleSocialClick(platform)}
               >
                 {platform?.isPrimary && (
