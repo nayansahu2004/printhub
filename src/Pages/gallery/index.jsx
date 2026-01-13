@@ -9,6 +9,24 @@ import GalleryModal from './components/GalleryModal';
 import CategoryTabs from './components/CategoryTabs';
 import StatsSection from './components/StatsSection';
 import TestimonialCarousel from './components/TestimonialCarousel';
+import { Link } from "react-router-dom";
+import Hoodie_Image from "../../assets/Custom_Apron.png"
+import Image_1 from '../../assets/Photo Gallery/Image_1.jpg';
+import Image_2 from '../../assets/Photo Gallery/Image_2.jpg';
+import Image_3 from '../../assets/Photo Gallery/Image_3.jpg';
+import Image_4 from '../../assets/Photo Gallery/Image_4.jpg';
+import Image_5 from '../../assets/Photo Gallery/Image_5.jpg';
+import Image_6 from '../../assets/Photo Gallery/Image_6.jpg';
+import Image_7 from '../../assets/Photo Gallery/Image_7.jpg';
+import Image_8 from '../../assets/Photo Gallery/Image_8.jpg';
+import Image_9 from '../../assets/Photo Gallery/Image_9.jpg';
+import Image_10 from '../../assets/Photo Gallery/Image_10.jpg';
+import Image_11 from '../../assets/Photo Gallery/Image_11.jpg';
+import Image_12 from '../../assets/Photo Gallery/Image_12.jpg';
+import Image_13 from '../../assets/Photo Gallery/Image_13.jpg';
+import Image_14 from '../../assets/Photo Gallery/Image_14.jpg';
+import Image_15 from '../../assets/Photo Gallery/Image_15.jpg';
+
 
 const Gallery = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -182,7 +200,38 @@ const Gallery = () => {
 
         {/* Stats Section — StatsSection already provides its own full-bleed bg + container,
             so don't wrap it in another container that could create gutters. */}
+        
+        {/* Photo Gallery Section */}
+            
+        {/* Simple Photo Gallery */}
+          <section className="container mx-auto px-6 py-16">
+            <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10">
+              Photo Gallery
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
+              {[
+                Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13, Image_14, Image_15
+              ].map((img, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-lg"
+                >
+                  <img
+                    src={img}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full  object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
+
+
         <StatsSection />
+
+        
 
         {/* Gallery Content — use container with px so content aligns with hero */}
         {/* <section id="gallery-content" className="container mx-auto px-6 py-12"> */}

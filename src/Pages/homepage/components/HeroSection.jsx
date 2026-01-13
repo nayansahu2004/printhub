@@ -79,7 +79,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-            <div className="h-28 overflow-hidden">
+            <div className="h-44 overflow-hidden">
               <Image
                 src={Hoodie_Image}
                 alt="Custom printed black hoodie with white logo"
@@ -94,7 +94,7 @@ const HeroSection = () => {
             </div>
 
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-            <div className="h-28 overflow-hidden">
+            <div className="h-44 overflow-hidden">
               <Image
                 src={Bag_Image}
                 alt="Custom printed black hoodie with white logo"
@@ -111,7 +111,7 @@ const HeroSection = () => {
 
           <div className="space-y-6 pt-10">
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-            <div className="h-28 overflow-hidden">
+            <div className="h-44 overflow-hidden">
               <Image
                 src={Mug_Image}
                 alt="Custom printed black hoodie with white logo"
@@ -126,7 +126,7 @@ const HeroSection = () => {
             </div>
 
             <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/30 bg-white/10 transform transition duration-300 ease-out hover:scale-105 will-change-transform">
-            <div className="h-28 overflow-hidden">
+            <div className="h-44 overflow-hidden">
               <Image
                 src={Shirt_Image}
                 alt="Custom printed black hoodie with white logo"

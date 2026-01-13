@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import Bag from '../../../components/ui/Button';
 
 const PricingComparison = ({ onWhatsAppClick }) => {
   const [selectedQuantity, setSelectedQuantity] = useState('50');
@@ -63,16 +64,16 @@ const PricingComparison = ({ onWhatsAppClick }) => {
     },
     {
       id: 'keychain',
-      name: 'Custom Keychains',
+      name: 'Tote Bags',
       icon: 'Key',
-      features: ['Durable Material', 'Laser Engraved', 'Quick Delivery'],
+      features: ['Durable Material', 'Premium', 'Quick Delivery'],
       popular: false
     },
     {
       id: 'phonecase',
-      name: 'Phone Cases',
-      icon: 'Smartphone',
-      features: ['All Models', 'Drop Protection', 'HD Printing'],
+      name: 'Hoodies',
+      icon: 'Shirt',
+      features: ['All size available', 'Comfort', 'Top quality Printing'],
       popular: true
     }
   ];
